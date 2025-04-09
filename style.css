@@ -88,31 +88,30 @@
 /*Intro*/
 .intro {
     text-align: center; 
-    margin: 25px auto; 
+    margin: 10px auto; 
     padding: 20px; 
     max-width: 100%;
-    background: #B4CDED;
+    background-color: #8ca3c1;
 }
 
 .intro p {
-    font-size: 33px; 
+    font-size: 25px; 
     color: #0D1821;
     margin: 0 0 20px; 
     line-height: 1.6; 
     font-family: dm sans, sans-serif;
     font-weight: bold;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .lottie-container {
-    display: flex; /* Use flexbox for alignment */
-    justify-content: center; /* Center the Lottie file horizontally */
-    margin-top: 20px; /* Add spacing above the Lottie file */
+    display: flex; 
+    justify-content: center; 
+    margin-top: 10px; /* Add spacing above the Lottie file */
 }
 
 .lottie-container dotlottie-player {
-    max-width: 100%;
-    height: auto; 
+    max-width: 100%; 
 }
 
 .intro {
@@ -304,14 +303,13 @@ img {
     border: 2px solid;
     border-radius: 8px;
     color: #0D1821;
-    width: 50%;
+    width: 25%;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
     font-family: "DM Sans", sans-serif;
-    margin-top: 60px; /* Adjust this value to move the button slightly lower */
-    align-self: center; /* Center the button horizontally */
+    align-self: center; 
 }
 
 .button-link:hover {
@@ -357,14 +355,14 @@ img {
 }
 
 .project-content {
-    display: grid; /* Use grid layout */
-    grid-template-columns: 1fr 1fr; /* Two equal columns: one for the image, one for the text */
-    gap: 0; /* No spacing between the image and text */
-    display: stretch; /* Use flexbox for vertical alignment */
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 0; 
+    display: stretch; 
 }
 
 .image-container {
-    display: flex; /* Center the image inside the container */
+    display: flex; 
     align-items: center;
 }
 
@@ -385,8 +383,8 @@ img {
 .text-container h3 {
     margin: 0 20px;
     font-family: "DM Sans", sans-serif;
-    font-size: 40px;
-    color: #0D1821; /* Dark navy for strong contrast */
+    font-size: 25px;
+    color: #0D1821; 
 }
 
 .text-container p {
