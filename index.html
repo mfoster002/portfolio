@@ -7,7 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lottie-web@5.7.13/build/player/lottie.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js">
+    </script>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+      type="module"></script>
 </head>
 <body>
 <header>
@@ -16,36 +22,114 @@
  <!--Nav Bar-->
  <div class="nav">
     <div class="bigscreen-menu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html">Work</a> <!-- Changed from "Home" to "Work" -->
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="blog.html">Blog</a>
     </div>
-<!--Hamburger Menu-->
+    <!--Hamburger Menu-->
     <label id="menuToggle"> 
         <input type="checkbox" />
         <span></span>
         <span></span>
         <span></span>
         <ul id="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html">Work</a> <!-- Changed from "Home" to "Work" -->
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Blog</a></li>
         </ul>
     </label>
+</div>
+<div class="intro">
+    <p>
+        Hi, I'm Marian Foster!<br><br> I'm a passionate designer specializing in creating user-friendly, visually stunning, and functional designs.
+        <br><br> Explore my portfolio to see how I bring ideas to life!
+    </p>
+    <div class="lottie-container">
+        <dotlottie-player
+            src="https://lottie.host/c96e347d-6172-4f1a-95dc-2a4f6822a8ef/RBSc1U1hqI.lottie"
+            background="transparent"
+            speed="1"
+            style="width: 200px; height: 200px"
+            loop
+            autoplay>
+        </dotlottie-player>
     </div>
-    <h1 class="pages-title">Projects</h1>
-   
-                    
+</div>
+    <!--Pillzy-->
+    <div class="project">
+        <div class="project-content">
+        <div class="image-container">
+            <a href="#.html">
+                <img src="images/pillzythumbnail.png" alt="Pillzy project preview">
+            </a>
+        </div>
+        <div class="text-container">
+            <h3>Pillzy</h3>
+            <p>A medication management mobile app for users aged 18-24.</p>
+            <h4>Key Features:</h4>
+            <ul class="features-list">
+                <li style="--i: 1;">Gamification elements</li>
+                <li style="--i: 2;">Barcode Scanning</li>
+                <li style="--i: 3;">Push Notifications</li>
+            </ul>
+            <a href="#" class="button-link">Learn More</a>
+            </div>
+        </div>
+    </div>
+  
+    <!--Glammed-->
+    <div class="project">
+        <div class="project-content">
+            <div class="image-container">
+                <a href="#.html">
+                    <img src="images/glammedthumbnail.png" alt="Glammed project preview">
+                </a>
+            </div>
+            <div class="text-container">
+                <h3>Glammed</h3>
+                <p>A tailored beauty tutorial experience.</p>
+                <h4>Key Features:</h4>
+                <ul class="features-list">
+                <li style="--i: 4";>App personalization</li>
+                <li style="--i: 5";>Loyalty programs and rewards</li>
+                <li style="--i: 6";>Shopping cart & wishlist</li>
+                </ul>
+                <a href="#.html" class="button-link">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+   <!--Charlotte Design Institute-->
+   <div class="project">
+        <div class="project-content">
+            <div class="image-container">
+                <a href="charlotte-fashion.html">
+                    <img src="images/cfithumbnail.png" alt="Charlotte Fashion Institute project preview">
+                </a>
+            </div>
+        <div class="text-container">
+            <h3>Charlotte Fashion Institute</h3>
+            <p>A website for a fashion school.</p>
+            <h4>Key Features:</h4>
+            <ul class="features-list">
+                <li style="--i: 7";> File uploads and downloads</li>
+                <li style="--i: 8";>Responsive design </li>
+                <li style="--i: 9";>Calendar and scheduling</li>
+            </ul>
+            <a href="#" class="button-link">Learn More</a>
+                </div>
+        </div>
+        
+
+    </div>    
     <footer>
+    <div class="footer-content">
         <p>Email: <a href="mailto:mfoster4@my.waketech.edu">mfoster4@my.waketech.edu</a></p>
-        <p>Copyright 2024. Marian Foster. All Rights Reserved.</p>
-
-             <a href="https://www.instagram.com/" class="insta-icon"  target="_blank">    
-                <img src="images/Instagram_Glyph_White.png" alt="instagram">
-             </a> 
-
-             <a href=https://www.youtube.com/ class="social-media-icon"   target="_blank">      
-                <img src="images/yt_logo_mono_dark.png" alt="youtube">
-             </a> 
-    </footer>
+        <p>Copyright 2025. Marian Foster. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
 </body>
+</html>
