@@ -93,7 +93,7 @@
         position: absolute;
         top: 60px;
         left: 0;
-        background: #8ca3c1;
+        background:#BFCC94;
         width: 100%;
         list-style: none;
         padding: 20px 0;
@@ -955,6 +955,65 @@ iframe {
 
 .carousel-button:hover {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Explore Other Projects Section */
+.explore-projects {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-top: 2px solid #e0e0e0; /* Subtle border for separation */
+}
+
+.explore-projects h2 {
+    font-size: 28px;
+    color: #0D1821;
+    margin-bottom: 20px;
+    font-family: "DM Sans", sans-serif;
+}
+
+.explore-projects-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+.explore-project-card {
+    width: 280px; /* Set a fixed width for the cards */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+}
+
+.explore-project-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.explore-project-image img {
+    width: 100%; /* Ensure the image fills the card width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+}
+
+.explore-project-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.explore-project-content h3 {
+    font-size: 20px;
+    color: #0D1821;
+    margin-bottom: 10px;
+}
+
+.explore-project-content p {
+    font-size: 14px;
+    color: #383e22;
 }
 
 /* Media Query for Small Screens (Mobile) */

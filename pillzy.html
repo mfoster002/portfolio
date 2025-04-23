@@ -11,6 +11,52 @@
     <link rel="stylesheet" href="/style.css">
     <script src="https://unpkg.com/lottie-web@5.7.13/build/player/lottie.min.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <style>
+        /* Explore Other Projects - Always Show Text */
+        .project-card-homepage {
+            position: relative; /* Enable positioning for overlay effects */
+            overflow: visible; /* Ensure content is not cut off */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+            background-color: #ffffff; /* White background for the card */
+            width: 100%; /* Ensure the card spans the full width of its container */
+            font-family: "DM Sans", sans-serif; /* Consistent font */
+            color: #0D1821; /* Text color */
+            height: auto; /* Allow the card to expand based on content */
+        }
+
+        .project-card-homepage .project-content {
+            position: static; /* Remove overlay positioning */
+            background-color: transparent; /* Remove the dark overlay */
+            color: #0D1821; /* Use a readable text color */
+            opacity: 1; /* Always show the content */
+            pointer-events: auto; /* Allow interaction */
+            text-align: center; /* Center-align the text */
+            padding: 10px; /* Add padding for spacing */
+            height: auto; /* Allow the content to expand */
+            overflow: visible; /* Ensure content is not cut off */
+        }
+
+        .project-card-homepage:hover .project-content {
+            opacity: 1; /* Ensure hover does not change opacity */
+        }
+
+        .project-card-homepage .project-image img {
+            transform: none; /* Disable zoom effect on hover */
+        }
+
+        @media screen and (min-width: 1024px) {
+            .project-card-homepage {
+                width: 300px; /* Set a fixed width for larger screens */
+                margin: 20px; /* Add spacing between cards */
+            }
+
+            .project-card-homepage .project-content {
+                font-size: 16px; /* Adjust font size for readability */
+            }
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -88,7 +134,7 @@
 <!-- Wireframes -->
 <section class="project-card">
     <h2>Wireframes</h2>
-    <p>These wireframes were created to outline the app's layout and functionality. <br><br>I focused on creating a clean, user-friendly interface that prioritized ease of use.</p>
+    <br><br>I focused on creating a clean, user-friendly interface that prioritized ease of use.</p>
     <div class="wireframes-container">
         <img src="images/pillzywireframe1.jpeg" alt="Wireframe 1" class="wireframe-image">
         <img src="images/pillzywireframe2.jpeg" alt="Wireframe 2" class="wireframe-image">
@@ -100,7 +146,7 @@
 <!-- User Testing -->
 <section class="project-card">
     <h2>User Testing</h2>
-    <p>After conducting user testing, I received valuable feedback that helped refine the design. <br><br>Users appreciated the simplicity of the interface but suggested adding more visual cues to enhance usability.</p>
+    <p>After conducting user testing, I received feedback that helped refine the design. <br><br>I learned users appreciated the simplicity of the interface but suggested adding more visual cues to enhance usability.</p>
     <div class="user-testing-container">
         <!-- Before Image -->
         <div class="user-testing-item">
@@ -118,7 +164,7 @@
 <!-- Final Design -->
 <section class="project-card">
     <h2>Final Design</h2>
-    <p>The final design incorporates user feedback and focuses on a clean, modern aesthetic. <br><br>It features a color palette that is both calming and engaging, with clear typography for easy readability.</p>
+    <p>The final design incorporates user feedback and focuses on a clean, modern aesthetic. <br><br>It features a fun color palette with clear typography and emojis.</p>
     <div class="final-design-container">
         <img src="images/pillzyfinal1.jpg" alt="Final Design 1" class="final-design-image">
         <img src="images/pillzyfinal2.jpg" alt="Final Design 2" class="final-design-image">
@@ -130,9 +176,41 @@
  
 <section class="project-card">
     <h2>Interactive Prototype</h2>
-    <p>Click the link below to view the interactive prototype of Pillzy. <br><br>This prototype showcases the app's functionality and user flow.</p>
+    <p>Click the link below to view the interactive prototype of Pillzy.
     <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://embed.figma.com/proto/NnMDW5bAZOND28GDwT6FKY/Pillzy-Hi-FI-Prototype?page-id=0%3A1&node-id=2033-355&p=f&viewport=940%2C252%2C0.14&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2033%3A355&embed-host=share" allowfullscreen></iframe>
 </section>
+
+<section class="explore-projects">
+    <h2>Explore Other Projects</h2>
+    <div class="explore-projects-grid">
+        <!-- Pillzy -->
+        <div class="explore-project-card">
+            <a href="pillzy.html">
+                <div class="explore-project-image">
+                    <img src="images/pillzythumbnail.jpg" alt="Pillzy project preview">
+                </div>
+            </a>
+            <div class="explore-project-content">
+                <h3>Pillzy</h3>
+                <p>A medication management mobile app for users aged 18-24.</p>
+            </div>
+        </div>
+
+        <!-- Thrift Finder -->
+        <div class="explore-project-card">
+            <a href="thriftfinder.html">
+                <div class="explore-project-image">
+                    <img src="images/thriftfinderthumbnail.jpg" alt="Thrift Finder project preview">
+                </div>
+            </a>
+            <div class="explore-project-content">
+                <h3>Thrift Finder</h3>
+                <p>An app that locates thrift shops.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <footer class="site-footer">
     <a href="pillzy.html">Pillzy</a> |
     <a href="glammed.html">Glammed</a> |
