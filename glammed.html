@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Prototype Design</title>
+    <title>Glammed | Marian Foster Designs</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://unpkg.com/lottie-web@5.7.13/build/player/lottie.min.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
 </head>
 <body>
 <header>
@@ -19,38 +16,128 @@
  <!--Nav Bar-->
  <div class="nav">
     <div class="bigscreen-menu">
-        <a href="index.html">Home</a>
-        <a href="#">About</a>
+        <a href="index.html">Work</a> 
+        <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
         <a href="blog.html">Blog</a>
+        <a href="Foster-resume.pdf" target="_blank">Resumé</a> 
     </div>
-<!--Hamburger Menu-->
+    <!--Hamburger Menu-->
     <label id="menuToggle"> 
         <input type="checkbox" />
         <span></span>
         <span></span>
         <span></span>
         <ul id="menu">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Work</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="blog.html">Blog</a></li>
         </ul>
     </label>
+</div>
+<h1>Glammed</h1>
+
+<!-- GIF and Project Overview -->
+<div class="horizontal-layout">
+    <!-- GIF -->
+    <img src="images/glammedlogin.gif" alt="Glammed project preview" class="gif-image">
+
+    <!-- Project Overview Card -->
+    <div class="project-overview-card">
+        <h2>Project Overview</h2>
+        <p>
+            Glammed is a tailored beauty tutorial experience designed to help users<br>
+            create personalized beauty routines. The app features a user-friendly<br>
+            interface, step-by-step tutorials, and customization options to suit<br>
+            individual preferences.
+        </p>
+        <h3>Key Features</h3>
+        <ul>
+            <li>Personalized beauty tutorials</li>
+            <li>Customizable routines</li>
+            <li>Step-by-step guidance</li>
+        </ul>
     </div>
-    <h1 class="pages-title">Glammed</h1>
-    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/z3aYCBC5vfUCWbO1rOQ3QJ/Lesson-9---Glammed-Hi-Fidelity-Prototype?page-id=0%3A1&node-id=4018-8&p=f&viewport=2663%2C5255%2C0.54&scaling=scale-down&content-scaling=fixed&starting-point-node-id=4018%3A8&embed-host=share" allowfullscreen></iframe>
-    <footer>
-        <p>Email: <a href="mailto:mfoster4@my.waketech.edu">mfoster4@my.waketech.edu</a></p>
-        <p>Copyright 2025. Marian Foster. All Rights Reserved.</p>
+</div>
 
-             <a href="https://www.instagram.com/" class="insta-icon"  target="_blank">    
-                <img src="images/Instagram_Glyph_White.png" alt="instagram">
-             </a> 
+<!-- Problem Statement -->
+<div class="project-card">
+    <h2>User Persona</h2>
+    <img src="images/glammedpersona.jpg" alt="User Persona">
+</div>
+<section class="problem-section">
+    <div class="project-card">
+        <h2>Understanding the Problem</h2>
+        <p>
+            Many users struggle to find beauty tutorials that match their unique<br>
+            preferences and needs. Glammed aims to solve this by providing a<br>
+            personalized experience that adapts to individual styles and goals.
+        </p>
+        <h3>Key Takeaways</h3>
+        <ul>
+            <li>Users value tutorials tailored to their specific needs.</li>
+            <li>Clear, step-by-step instructions improve user satisfaction.</li>
+        </ul>
+    </div>
+</section>
 
-             <a href="https://www.youtube.com/" class="social-media-icon"   target="_blank">      
-                <img src="images/yt_logo_mono_dark.png" alt="youtube">
-             </a> 
-    </footer>
+<!-- Wireframes -->
+<section class="project-card">
+    <h2>Wireframes</h2>
+    <p>These wireframes were created to outline the app's layout and functionality. <br><br>I focused on creating a clean, user-friendly interface that prioritized ease of use.</p>
+    <div class="wireframes-container">
+        <img src="images/glammedwireframe1.jpg" alt="Wireframe 1" class="wireframe-image">
+        <img src="images/glammedwireframe2.jpg" alt="Wireframe 2" class="wireframe-image">
+        <img src="images/glammedwireframe3.jpg" alt="Wireframe 3" class="wireframe-image">
+    </div>
+</section>
+
+<!-- User Testing -->
+<section class="project-card">
+    <h2>User Testing</h2>
+    <p>After conducting user testing, I received valuable feedback that helped refine the design. <br><br>Users appreciated the personalized approach but suggested improving the navigation flow.</p>
+    <div class="user-testing-container">
+        <!-- Before Image -->
+        <div class="user-testing-item">
+            <img src="images/glammedtesting1.jpg" alt="User Testing Before" class="user-testing-image">
+            <p class="image-caption">Before</p>
+        </div>
+        <!-- After Image -->
+        <div class="user-testing-item">
+            <img src="images/glammedtesting2.jpg" alt="User Testing After" class="user-testing-image">
+            <p class="image-caption">After</p>
+        </div>
+    </div>
+</section>
+
+<!-- Final Design -->
+<section class="project-card">
+    <h2>Final Design</h2>
+    <p>The final design incorporates user feedback and focuses on a clean, modern aesthetic. <br><br>It features a color palette that is both calming and engaging, with clear typography for easy readability.</p>
+    <div class="final-design-container">
+        <img src="images/glammedfinal1.jpg" alt="Final Design 1" class="final-design-image">
+        <img src="images/glammedfinal2.jpg" alt="Final Design 2" class="final-design-image">
+        <img src="images/glammedfinal3.jpg" alt="Final Design 3" class="final-design-image">
+    </div>
+</section>
+
+<!-- Interactive Prototype -->
+<section class="project-card">
+    <h2>Interactive Prototype</h2>
+    <p>Click the link below to view the interactive prototype of Glammed. <br><br>This prototype showcases the app's functionality and user flow.</p>
+    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://embed.figma.com/proto/z3aYCBC5vfUCWbO1rOQ3QJ/Lesson-9---Glammed-Hi-Fidelity-Prototype?page-id=0%3A1&node-id=4018-8&p=f&viewport=2663%2C5255%2C0.54&scaling=scale-down&content-scaling=fixed&starting-point-node-id=4018%3A8&embed-host=share" allowfullscreen></iframe>
+</section>
+
+<footer>
+    <a href="mailto:mfoster4@my.waketech.edu">mfoster4@my.waketech.edu</a>
+    <p>Copyright 2025. Marian Foster. All Rights Reserved.</p>
+    <a href="https://www.instagram.com/" class="insta-icon" target="_blank">
+        <img src="images/Instagram_Glyph_White.png" alt="Instagram">
+    </a>
+    <a href="https://www.youtube.com/" class="social-media-icon" target="_blank">
+        <img src="images/yt_logo_mono_dark.png" alt="YouTube">
+    </a>
+</footer>
 </body>
 </html>

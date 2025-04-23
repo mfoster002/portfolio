@@ -417,7 +417,8 @@ img {
 }
 
 .project-overview-card p,.project-overview-card li, .project-card p, .project-card li {
-    color: #4e698e;
+    color: #000000;
+    font-size: 20px;
     margin-left: 15px;
     margin-bottom: 0px;
 }
@@ -440,7 +441,7 @@ img {
 }
 
 .project-text p {
-    font-size: 18px; /* Adjust font size for the paragraph */
+    font-size: 20px; /* Adjust font size for the paragraph */
     line-height: 1.6; /* Improve readability */
     margin: 0; /* Remove default margins */
 }
@@ -556,6 +557,63 @@ img {
     object-fit: cover; /* Ensure the GIF maintains its aspect ratio */
     border-radius: 8px; /* Optional: Add rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+/* User Testing Container */
+.user-testing-container {
+    display: flex; /* Use Flexbox to align items horizontally */
+    justify-content: center; /* Center the images horizontally */
+    gap: 20px; /* Add spacing between the images */
+    margin: 20px 0; /* Add spacing above and below the container */
+}
+
+/* User Testing Item */
+.user-testing-item {
+    display: flex;
+    flex-direction: column; /* Stack the image and caption vertically */
+    align-items: center; /* Center-align the content */
+    text-align: center; /* Center-align the caption */
+}
+
+/* User Testing Image */
+.user-testing-image {
+    width: 600px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+.user-testing-image:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+
+}
+
+/* Image Caption */
+.image-caption {
+    margin-top: 10px; /* Add spacing above the caption */
+    font-family: "DM Sans", sans-serif; /* Consistent font */
+    font-size: 16px; /* Adjust font size */
+    color: #0D1821; /* Text color */
+}
+
+/* Final Design Container */
+.final-design-container {
+    display: flex; /* Use Flexbox to align images horizontally */
+    justify-content: center; /* Center the images horizontally */
+    gap: 20px; /* Add spacing between the images */
+    margin: 20px 0; /* Add spacing above and below the container */
+}
+
+/* Final Design Image */
+.final-design-image {
+    width: 400px; /* Set a smaller width for the images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 0.3s ease; /* Add a hover effect */
+}
+
+.final-design-image:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
 }
 
 /*ABOUT PAGE*/
