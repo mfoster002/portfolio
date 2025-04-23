@@ -28,7 +28,7 @@
     display: none;
     position: relative;
     flex-direction: column;
-    z-index: 8;
+    z-index: 10; /* Ensure the hamburger menu is above other elements */
 }
 
 #menuToggle input {
@@ -70,21 +70,54 @@
 
 @media screen and (max-width: 800px) {
     .bigscreen-menu {
-        display: none;
+        display: none; /* Hide the bigscreen menu on smaller screens */
     }
 
     #menuToggle {
-        display: flex;
+        display: flex; /* Show the hamburger menu */
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    #menuToggle span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin: 5px 0;
+        background: #0D1821; /* Color of the hamburger lines */
+        transition: background 0.3s, transform 0.3s;
+    }
+
+    #menu {
+        display: none; /* Initially hide the menu */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #8ca3c1;
+        width: 100%;
+        list-style: none;
+        padding: 20px 0;
+        z-index: 10;
+    }
+
+    #menu li {
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    #menuToggle input:checked ~ #menu {
+        display: block; /* Show the menu when the checkbox is checked */
     }
 }
 
 @media screen and (min-width: 801px) {
     #menuToggle {
-        display: none;
+        display: none; /* Hide the hamburger menu on larger screens */
     }
 
     .bigscreen-menu {
-        display: flex;
+        display: flex; /* Show the bigscreen menu on larger screens */
     }
 }
 /*Intro*/
@@ -217,7 +250,7 @@ body {
 
 @media screen and (max-width: 500px) {
     header {
-        height: 100px;
+        height: 75px;
     }
 }
 
@@ -275,8 +308,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0; /* Remove any default margin */
-    padding: 0; /* Remove any default padding */
+    margin: 0; 
+    padding: 0;
 }
 
 header::before {
@@ -287,7 +320,6 @@ header::before {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.6); 
-    z-index: 1;
 }
 
 /*IMAGES*/
@@ -900,17 +932,17 @@ iframe {
     }
 
     .nav a {
-        font-size: 18px; /* Reduce font size for links */
-        padding: 0 10px; /* Reduce spacing between links */
+        font-size: 18px; 
+        padding: 0 10px; /
     }
 
     /* Hamburger Menu */
     #menu {
-        padding: 10px 0; /* Reduce padding for the menu */
+        padding: 10px 0; 
     }
 
     #menu li {
-        padding: 5px 0; /* Reduce spacing between menu items */
+        padding: 5px 0; /
     }
 
     /* Project Cards */
@@ -990,6 +1022,42 @@ iframe {
     .carousel-button {
         padding: 5px 10px; /* Reduce button size */
         font-size: 18px; /* Adjust font size */
+    }
+
+    /* Disable hover effect on project cards */
+    .project-card-homepage .project-content {
+        opacity: 1; /* Always show the content */
+        pointer-events: auto; /* Allow interaction */
+        background-color: transparent; /* Remove the dark overlay */
+        color: #0D1821; /* Use a readable text color */
+        position: static; /* Make the content flow naturally */
+        text-align: left; /* Align text to the left */
+        padding: 10px; /* Add padding for spacing */
+    }
+
+    .project-card-homepage .project-content h3 {
+        font-size: 20px; /* Adjust font size for titles */
+        margin-bottom: 5px; /* Add spacing below the title */
+    }
+
+    .project-card-homepage .project-content p {
+        font-size: 14px; /* Adjust font size for descriptions */
+        margin: 0; /* Remove extra margins */
+    }
+
+    /* Adjust the project card layout */
+    .project-card-homepage {
+        display: flex; /* Use Flexbox for layout */
+        flex-direction: column; /* Stack content vertically */
+        align-items: flex-start; /* Align content to the left */
+        padding: 10px; /* Add padding */
+        box-shadow: none; /* Remove hover shadow */
+    }
+
+    .project-card-homepage .project-image img {
+        width: 100%; /* Ensure the image spans the full width */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 10px; /* Add spacing below the image */
     }
 }
 
