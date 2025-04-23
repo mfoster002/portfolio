@@ -3,15 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Prototype Design</title>
+    <title>Marian Foster | UX Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://unpkg.com/lottie-web@5.7.13/build/player/lottie.min.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js">
-    </script>
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
       type="module"></script>
 </head>
@@ -22,11 +18,11 @@
  <!--Nav Bar-->
  <div class="nav">
     <div class="bigscreen-menu">
-        <a href="index.html">Work</a> <!-- Changed from "Home" to "Work" -->
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+        <a href="index.html">Work</a> 
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
         <a href="blog.html">Blog</a>
-    </div>
+        <a href="Foster-resume.pdf" target="_blank">Resumé</a>    
     <!--Hamburger Menu-->
     <label id="menuToggle"> 
         <input type="checkbox" />
@@ -34,101 +30,63 @@
         <span></span>
         <span></span>
         <ul id="menu">
-            <li><a href="index.html">Work</a> <!-- Changed from "Home" to "Work" -->
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="index.html">Work</a> 
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
         </ul>
     </label>
 </div>
-<div class="intro">
-    <p>
-        Hi, I'm Marian Foster!<br><br> I'm a passionate designer specializing in creating user-friendly, visually stunning, and functional designs. See my work below!
-    </p>
-    <div class="lottie-container">
-        <dotlottie-player
-            src="https://lottie.host/c96e347d-6172-4f1a-95dc-2a4f6822a8ef/RBSc1U1hqI.lottie"
-            background="transparent"
-            speed="1"
-            style="width: 130px; height: 130px"
-            loop
-            autoplay>
-        </dotlottie-player>
-    </div>
-</div>
-    <!--Pillzy-->
-    <div class="project">
-        <div class="project-content">
-        <div class="image-container">
-            <a href="#.html">
-                <img src="images/pillzythumbnail.png" alt="Pillzy project preview">
-            </a>
-        </div>
-        <div class="text-container">
-            <h3>Pillzy</h3>
-            <p>A medication management mobile app for users aged 18-24.</p>
-            <h4>Key Features:</h4>
-            <ul class="features-list">
-                <li style="--i: 1;">Gamification elements</li>
-                <li style="--i: 2;">Barcode Scanning</li>
-                <li style="--i: 3;">Push Notifications</li>
-            </ul>
-            <a href="#" class="button-link">Learn More</a>
+<h1 >UX DESIGN PROJECTS</h1>
+<div class="projects-grid">
+        <!-- Pillzy -->
+        <div class="project-card-homepage">
+            <a href="pillzy.html">
+            <div class="project-image">
+                <img src="images/pillzythumbnail.jpg" alt="Pillzy project preview">
+            </div>
+        </a>
+            <div class="project-content">
+                <h3>Pillzy</h3>
+                <p>A medication management mobile app for users aged 18-24.</p>
             </div>
         </div>
-    </div>
-  
-    <!--Glammed-->
-    <div class="project">
+   
+    <!-- Glammed -->
+    <div class="project-card-homepage">
+        <a href="glammed.html">
+        <div class="project-image">
+            <img src="images/glammedthumbnail.jpg" alt="Glammed project preview">
+        </div>
+    </a>
         <div class="project-content">
-            <div class="image-container">
-                <a href="#.html">
-                    <img src="images/glammedthumbnail.png" alt="Glammed project preview">
-                </a>
-            </div>
-            <div class="text-container">
-                <h3>Glammed</h3>
-                <p>A tailored beauty tutorial experience.</p>
-                <h4>Key Features:</h4>
-                <ul class="features-list">
-                <li style="--i: 4";>App personalization</li>
-                <li style="--i: 5";>Loyalty programs and rewards</li>
-                <li style="--i: 6";>Shopping cart & wishlist</li>
-                </ul>
-                <a href="#.html" class="button-link">Learn More</a>
-            </div>
+            <h3>Glammed</h3>
+            <p>A tailored beauty tutorial experience.</p>
         </div>
     </div>
 
-   <!--Charlotte Design Institute-->
-   <div class="project">
+    <!-- Charlotte Fashion Institute -->
+    <div class="project-card-homepage">
+        <div class="project-image">
+            <img src="images/cfithumbnail.jpg" alt="Charlotte Fashion Institute project preview">
+        </div>
         <div class="project-content">
-            <div class="image-container">
-                <a href="charlotte-fashion.html">
-                    <img src="images/cfithumbnail.png" alt="Charlotte Fashion Institute project preview">
-                </a>
-            </div>
-        <div class="text-container">
             <h3>Charlotte Fashion Institute</h3>
             <p>A website for a fashion school.</p>
-            <h4>Key Features:</h4>
-            <ul class="features-list">
-                <li style="--i: 7";> File uploads and downloads</li>
-                <li style="--i: 8";>Responsive design </li>
-                <li style="--i: 9";>Calendar and scheduling</li>
-            </ul>
-            <a href="#" class="button-link">Learn More</a>
-                </div>
-        </div>
-        
-
-    </div>    
-    <footer>
-    <div class="footer-content">
-        <p>Email: <a href="mailto:mfoster4@my.waketech.edu">mfoster4@my.waketech.edu</a></p>
-        <p>Copyright 2025. Marian Foster. All Rights Reserved.</p>
         </div>
     </div>
+</div>
+    <footer>
+    <div class="footer-content">
+                <footer>
+    <a href="mailto:mfoster4@my.waketech.edu">mfoster4@my.waketech.edu</a></p>
+            <p>Copyright 2025. Marian Foster. All Rights Reserved.</p>
+            <a href="https://www.instagram.com/" class="insta-icon" target="_blank">
+                <img src="images/Instagram_Glyph_White.png" alt="instagram">
+            </a>
+            <a href="https://www.youtube.com/" class="social-media-icon" target="_blank">
+                <img src="images/yt_logo_mono_dark.png" alt="youtube">
+            </a>iv>
 </footer>
 </body>
 </html>
