@@ -389,11 +389,7 @@ header::before {
 img {
     width:100%;
 }
-/*animations*/
-#pillzy-animation {
-    width:400px;
-    height:400px;
-}
+
 
 /*BUTTONS*/
 
@@ -1121,6 +1117,21 @@ iframe {
         width: 100%; /* Ensure the image spans the full width */
         height: auto; /* Maintain aspect ratio */
         margin-bottom: 10px; /* Add spacing below the image */
+    }
+
+    header {
+        display: flex; /* Use Flexbox for alignment */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        height: 100px; /* Adjust height as needed */
+        text-align: center; /* Center-align the text */
+        padding: 0; /* Remove extra padding */
+    }
+
+    header h1 {
+        font-size: 30px; /* Adjust font size for smaller screens */
+        margin: 0; /* Remove default margins */
+        padding: 0; /* Remove extra padding */
     }
 }
 
