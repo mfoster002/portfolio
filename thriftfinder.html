@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thrift Finder | Marian Foster Designs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1>MARIAN FOSTER DESIGNS</h1>
+</header>
+ <!--Nav Bar-->
+ <div class="nav">
+    <div class="bigscreen-menu">
+        <a href="index.html">Work</a> 
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="Foster-resume.pdf" target="_blank">Resumé</a> 
+    </div>
+    <!--Hamburger Menu-->
+    <label id="menuToggle"> 
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+            <li><a href="index.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </label>
+</div>
+<h1>Thrift Finder</h1>
+
+<!-- Project Overview Card -->
+<section class="project-card">
+    <h2>Project Overview</h2>
+    <p>
+        Thrift Finder is an app designed to help users locate thrift shops<br>
+        in their area. The app features a user-friendly interface, search<br>
+        filters, and personalized recommendations to make thrift shopping<br>
+        more accessible and enjoyable.
+    </p>
+    <h3>Key Features</h3>
+    <ul>
+        <li>Thrift shop locator with store details (hours, contact info)</li>
+        <li>User reviews and ratings with sorting options</li>
+        <li>Interactive map integration for directions</li>
+        <li>User profiles to track reviews and favorites</li>
+        <li>Enhanced accessibility with larger buttons and text spacing</li>
+    </ul>
+</section>
+
+<!-- Problem Statement -->
+<section class="problem-section">
+    <div class="project-card">
+        <h2>Problem & Goal</h2>
+        <p>
+            <strong>Problem:</strong> Many users struggle to find thrift shops that<br>
+            match their preferences and budget.<br>
+            <strong>Goal:</strong> Provide a platform that simplifies the process of<br>
+            finding thrift shops and enhances the shopping experience.
+        </p>
+    </div>
+</section>
+
+<!-- User Research -->
+<section class="project-card">
+    <h2>User Research & Insights</h2>
+    <p>
+        <strong>Methods:</strong> Surveys, interviews, competitive analysis<br>
+    </p>
+    <p><strong>Main Pain Points:</strong></p>
+    <ul>
+        <li>Lack of centralized information about thrift shops</li>
+        <li>Difficulty filtering shops by category or price</li>
+        <li>Limited options for personalized recommendations</li>
+    </ul>
+    <h2>Case Study</h2>
+
+<!-- CASE STUDY -->
+<section class="case-study-carousel">
+    
+    <div class="carousel">
+        <button class="carousel-button prev" onclick="prevSlide()">&#10094;</button>
+        <div class="carousel-slides">
+            <img src="images/page1.jpg" alt="Case Study Page 1" class="carousel-slide">
+            <img src="images/page2.jpg" alt="Case Study Page 2" class="carousel-slide">
+            <img src="images/page3.jpg" alt="Case Study Page 3" class="carousel-slide">
+            <img src="images/page4.jpg" alt="Case Study Page 4" class="carousel-slide">
+            <img src="images/page5.jpg" alt="Case Study Page 5" class="carousel-slide">
+            <img src="images/page6.jpg" alt="Case Study Page 6" class="carousel-slide">
+            <img src="images/page7.jpg" alt="Case Study Page 7" class="carousel-slide">
+            <img src="images/page8.jpg" alt="Case Study Page 8" class="carousel-slide">
+            <img src="images/page9.jpg" alt="Case Study Page 9" class="carousel-slide">
+            <img src="images/page10.jpg" alt="Case Study Page 10" class="carousel-slide">
+            <img src="images/page11.jpg" alt="Case Study Page 11" class="carousel-slide">
+            <img src="images/page12.jpg" alt="Case Study Page 12" class="carousel-slide">
+        </div>
+        <button class="carousel-button next" onclick="nextSlide()">&#10095;</button>
+    </div>
+</section>
+</section>
+
+<!-- User Testing -->
+<section class="project-card">
+    <h2>User Testing</h2>
+    <p>
+        <strong>Survey on Desired Features:</strong><br>
+        - 43% of users wanted store hours and phone numbers directly in the app.<br>
+        <strong>Design Change:</strong> Included store contact info and improved visibility.<br><br>
+
+        <strong>Preference Testing:</strong><br>
+        - 70% preferred a thicker font for headers.<br>
+        - 80% preferred rounded shapes.<br>
+        <strong>Design Change:</strong> Adopted thicker fonts and rounded buttons.<br><br>
+
+        <strong>Maze Unmoderated Study:</strong><br>
+        - Users could find the "Full Hours" button, but the text was too small.<br>
+        <strong>Design Change:</strong> Increased text size, enhanced color and font weight, and improved spacing.<br><br>
+
+        <strong>2nd Usability Study (Moderated):</strong><br>
+        - Users needed a sort button for reviews.<br>
+        - Trouble finding additional store hours.<br>
+        <strong>Design Change:</strong> Added a sort button, increased spacing, and used bold, capitalized fonts for clarity.
+    </p>
+</section>
+
+<!-- Interactive Prototype -->
+<section class="project-card">
+    <h2>Interactive Prototype</h2>
+    <p>Click the link below to view the interactive prototype of Thrift Finder. <br>
+ <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/msmr7YDbTRk7gMKr9pkivU/Thrift-Finder---High-Fidelity-Prototype-after-2nd-usability-test?page-id=0%3A1&node-id=5402-230&viewport=205%2C477%2C0.19&scaling=scale-down&content-scaling=fixed&starting-point-node-id=3402%3A444&embed-host=share" allowfullscreen></iframe>
+</section>
+
+<footer class="site-footer">
+    <a href="pillzy.html">Pillzy</a> |
+    <a href="glammed.html">Glammed</a> |
+    <a href="thriftfinder.html">Thrift Finder</a>
+    <p>Copyright 2025. Marian Foster. All Rights Reserved.</p>
+    <p><a href="mailto:mfoster4@my.waketech.edu">mfoster4@my.waketech.edu</a></p>
+</footer>
+<script>
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        const slides = document.querySelectorAll('.carousel-slide');
+        const totalSlides = slides.length;
+
+        // Wrap around if index is out of bounds
+        if (index >= totalSlides) {
+            currentSlide = 0;
+        } else if (index < 0) {
+            currentSlide = totalSlides - 1;
+        } else {
+            currentSlide = index;
+        }
+
+        // Move the slides container
+        const slidesContainer = document.querySelector('.carousel-slides');
+        slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentSlide - 1);
+    }
+
+    // Initialize the first slide
+    showSlide(currentSlide);
+</script>
+</body>
+</html>

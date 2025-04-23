@@ -9,6 +9,7 @@
     font-weight: bold
 }
 
+/* Navigation Links */
 .nav a {
     font-family: "DM Sans", sans-serif;
     text-decoration: none;
@@ -321,6 +322,23 @@ img {
 
 .button-link:hover {
     background-color: #9bb34a;
+}
+
+.green-button {
+    background-color: #28a745; /* Replace with your specific green color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.green-button:hover {
+    background-color: #218838; /* Darker green for hover effect */
 }
 
 /*WORK PAGE*/
@@ -683,6 +701,7 @@ img {
 
 .connect-card .button-link {
     margin-top: 20px;
+    margin-bottom: 20px;
     padding: 15px 30px;
     background-color: #BFCC94;
     color: #0D1821;
@@ -722,37 +741,35 @@ img {
 }
 
 /*FOOTER*/
-footer {
+
+.site-footer {
     background-color: #0D1821; /* Dark background for contrast */
     color: #f0f4ef; /* Light text color */
     text-align: center; /* Center-align the content */
-    padding: 10px 10px; /* Reduce padding for spacing */
+    padding: 20px; /* Add padding for spacing */
     font-family: "DM Sans", sans-serif; /* Use consistent font */
-    font-size: 16px; /* Set a readable font size */
+    font-size: 15px; /* Set a readable font size */
+    position: relative; /* Ensure it stays in the layout flow */
+    z-index: 1; /* Ensure it doesn’t overlap other elements */
 }
 
-footer a {
-    color: #BFCC94; /* Light green for links */
+/* Footer Links */
+.site-footer a {
+    color: #BFCC94; /* Light green for footer links */
     text-decoration: none; /* Remove underline */
     font-weight: bold; /* Make links stand out */
 }
 
-footer a:hover {
+.site-footer a:hover {
     color: #9bb34a; /* Slightly darker green on hover */
+    border-bottom: none; /* Ensure no underline or border appears */
 }
 
-footer p {
+.site-footer p {
     margin: 8px 0; /* Reduce vertical spacing between paragraphs */
     padding: 0; /* Remove any padding */
     line-height: 1.4; /* Adjust line spacing for better readability */
     color: #f0f4ef; /* Ensure text color remains readable */
-}
-
-.footer-content {
-    display: flex; /* Use flexbox for alignment */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center-align items */
-    gap: 8px; /* Reduce spacing between elements */
 }
 
 .social-media {
@@ -794,5 +811,59 @@ iframe {
     border: 1px solid rgba(0, 0, 0, 0.1); /* Optional: Add a border */
     border-radius: 8px; /* Optional: Add rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+/* Case Study Carousel */
+.case-study-carousel {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+    position: relative;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
