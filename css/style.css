@@ -1133,6 +1133,23 @@ iframe {
         margin: 0; /* Remove default margins */
         padding: 0; /* Remove extra padding */
     }
+    .connect-card h2 {
+        color:#0D1821;
+        font-size: 24px; /* Adjust font size if needed */
+        margin-bottom: 10px; /* Add spacing below the heading */
+    }
+
+    .connect-card .button-link {
+        width: 80%; /* Make the button span most of the screen width */
+        font-size: 14px; /* Reduce font size for better readability */
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+        margin: 10px auto; /* Center the button and add spacing */
+    }
+
+    .connect-card {
+        padding: 10px; /* Add padding around the card */
+        text-align: center; /* Ensure the text is centered */
+    }
 }
 
 /* Media Query for Extra Small Screens (Mobile) */
