@@ -349,29 +349,29 @@ img {
 }
 
 .project-card {
-    position: relative; /* Enable positioning for overlay effects */
-    overflow: hidden; /* Ensure content stays within the card */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
-    background-color: #ffffff; /* White background for the card */
-    padding: 20px; /* Add padding inside the card */
-    margin: 20px auto; /* Add spacing between cards */
-    width:100%
-    font-family: "DM Sans", sans-serif; /* Consistent font */
-    color: #0D1821; /* Text color */
+    position: relative; 
+    overflow: hidden; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    background-color: #ffffff; 
+    padding: 20px; 
+    margin: 20px auto; 
+    width:100%;
+    font-family: "DM Sans", sans-serif; 
+    color: #0D1821; 
 }
 
 .project-card:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
 }
 
 .project-image img {
-    width: 100%; /* Ensure the image fills the card width */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure the image maintains its aspect ratio */
-    transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    transition: transform 0.3s ease; 
 }
 
 .project-card:hover .project-image img {
@@ -572,8 +572,8 @@ img {
     max-width: 300px; /* Limit the maximum width of the GIF */
     height: 432px; /* Match the height of the Project Overview card */
     object-fit: cover; /* Ensure the GIF maintains its aspect ratio */
-    border-radius: 8px; /* Optional: Add rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 /* User Testing Container */
@@ -596,8 +596,8 @@ img {
 .user-testing-image {
     width: 500px; /* Set the desired width */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Optional: Add rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     
 }
 .user-testing-image:hover {
@@ -719,8 +719,8 @@ img {
     height: auto; /* Maintain aspect ratio */
     margin: 10px auto; /* Add spacing and center the images */
     display: block; /* Ensure the images are centered */
-    border-radius: 8px; /* Optional: Add rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .wireframes-container {
@@ -734,9 +734,9 @@ img {
     width: 25%; /* Set the desired width */
     height: auto; /* Maintain the aspect ratio */
     display: block; /* Ensure the GIF is treated as a block element */
-    margin-left: 50px;;
-    border-radius: 8px; /* Optional: Add rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    margin-left: 50px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 /*FOOTER*/
@@ -807,9 +807,9 @@ img {
 iframe {
     width: 100%; /* Make the iframe span the full width */
     height: 600px; /* Set a fixed height or adjust as needed */
-    border: 1px solid rgba(0, 0, 0, 0.1); /* Optional: Add a border */
-    border-radius: 8px; /* Optional: Add rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 /* Case Study Carousel */
