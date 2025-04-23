@@ -1,12 +1,11 @@
 /*NAV & HAMBURGER MENU*/
 .nav {
     text-align: right;
-    margin-bottom: 0; /* Remove spacing below the navigation bar */
-    color: ;
+    margin-bottom: 0;
     height: 40px;
     padding: 25px;
-    padding-bottom: 0; /* Remove padding below the navigation bar */
-    font-weight: bold
+    padding-bottom: 0;
+    font-weight: bold;
 }
 
 /* Navigation Links */
@@ -235,8 +234,8 @@ body {
 header h1 {
     font-size: 35px;
     color: rgb(255, 255, 255);
-    text-align: center;
-    margin: 0;
+    text-align: right;
+    margin-right: 50px;
     padding: 0;
     position: relative;
     z-index: 2;
@@ -865,5 +864,168 @@ iframe {
 
 .carousel-button:hover {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Media Query for Small Screens (Mobile) */
+@media screen and (max-width: 768px) {
+    /* General Body and Text Adjustments */
+    body {
+        font-size: 16px; /* Reduce font size for better readability */
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 40px; /* Adjust header size */
+        padding-left: 20px; /* Reduce padding */
+    }
+
+    h2 {
+        font-size: 24px; /* Adjust subheader size */
+        padding: 5px;
+    }
+
+    h3 {
+        font-size: 20px; /* Adjust smaller headers */
+    }
+
+    p {
+        font-size: 16px; /* Adjust paragraph font size */
+        padding: 10px;
+    }
+
+    /* Navigation Bar */
+    .nav {
+        padding: 10px; /* Reduce padding */
+        height: auto; /* Allow height to adjust */
+    }
+
+    .nav a {
+        font-size: 18px; /* Reduce font size for links */
+        padding: 0 10px; /* Reduce spacing between links */
+    }
+
+    /* Hamburger Menu */
+    #menu {
+        padding: 10px 0; /* Reduce padding for the menu */
+    }
+
+    #menu li {
+        padding: 5px 0; /* Reduce spacing between menu items */
+    }
+
+    /* Project Cards */
+    .project-card,
+    .project-card-homepage {
+        margin: 10px auto; /* Reduce margins */
+        padding: 10px; /* Reduce padding */
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    .project-content h3 {
+        font-size: 24px; /* Adjust font size for project titles */
+    }
+
+    .project-content p {
+        font-size: 14px; /* Adjust font size for project descriptions */
+    }
+
+    /* Horizontal Layout for GIF and Project Overview */
+    .horizontal-layout {
+        flex-direction: column; /* Stack items vertically */
+        gap: 10px; /* Reduce spacing */
+    }
+
+    .gif-image {
+        display:none;
+    }
+
+    .project-overview-card {
+        margin: 0 auto; /* Center the card */
+        width: 100%; /* Allow card to span full width */
+    }
+
+    /* Wireframes and Final Design Images */
+    .wireframes-container,
+    .final-design-container {
+        flex-direction: column; /* Stack images vertically */
+        gap: 10px; /* Reduce spacing between images */
+    }
+
+    .wireframe-image,
+    .final-design-image {
+        width: 100%; /* Allow images to span full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* User Testing Images */
+    .user-testing-container {
+        flex-direction: column; /* Stack images vertically */
+        gap: 10px; /* Reduce spacing */
+    }
+
+    .user-testing-image {
+        width: 100%; /* Allow images to span full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Footer */
+    .site-footer {
+        font-size: 14px; /* Reduce font size */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .site-footer a {
+        font-size: 14px; /* Adjust link font size */
+    }
+
+    /* Case Study Carousel */
+    .carousel {
+        height: 300px; /* Reduce carousel height */
+    }
+
+    .carousel-slide {
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .carousel-button {
+        padding: 5px 10px; /* Reduce button size */
+        font-size: 18px; /* Adjust font size */
+    }
+}
+
+/* Media Query for Extra Small Screens (Mobile) */
+@media screen and (max-width: 480px) {
+    /* Header */
+    header h1 {
+        font-size: 30px; /* Further reduce header size */
+    }
+
+    /* Navigation Bar */
+    .nav a {
+        font-size: 16px; /* Further reduce font size for links */
+    }
+
+    /* Project Cards */
+    .project-card,
+    .project-card-homepage {
+        padding: 5px; /* Further reduce padding */
+    }
+
+    .project-content h3 {
+        font-size: 20px; /* Adjust font size for project titles */
+    }
+
+    .project-content p {
+        font-size: 12px; /* Adjust font size for project descriptions */
+    }
+
+    /* Footer */
+    .site-footer {
+        font-size: 12px; /* Further reduce font size */
+    }
+
+    .site-footer a {
+        font-size: 12px; /* Adjust link font size */
+    }
 }
 
