@@ -440,17 +440,20 @@ img {
 }
 
 .project-card {
-    position: relative; 
-    overflow: hidden; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
-    background-color: #ffffff; 
-    padding: 20px; 
-    margin: 20px auto; 
-    width:100%;
-    font-family: "DM Sans", sans-serif; 
-    color: #0D1821; 
+    flex: 1; /* Allow the card to take up the remaining space */
+    background-color: #ffffff; /* White background for the card */
+    border-radius: 8px; /* Rounded corners */
+    height: auto; /* Allow the height to adjust based on content */
+    font-family: "DM Sans", sans-serif; /* Consistent font */
+    color: #0D1821; /* Text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    display: flex; /* Use Flexbox for alignment */
+    flex-direction: column; /* Stack content vertically */
+    margin: 20px auto; /* Center the card and add spacing */
+    max-width: 90%; /* Ensure the card does not exceed 90% of the screen width */
+    padding: 20px; /* Add padding inside the card */
+    overflow: hidden; /* Prevent content from overflowing */
+    box-sizing: border-box; /* Include padding in the width calculation */
 }
 
 .project-card:hover {
@@ -568,20 +571,6 @@ img {
     display: flex; /* Use Flexbox for alignment */
     flex-direction: column; /* Stack content vertically */
     margin-top: 0px;
-    margin-right: 60px;
-}
-.project-card {
-    flex: 1; /* Allow the card to take up the remaining space */
-    background-color: #ffffff; /* White background for the card */
-    border-radius: 8px; /* Rounded corners */
-    height:auto;
-    font-family: "DM Sans", sans-serif; /* Consistent font */
-    color: #0D1821; /* Text color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    display: flex; /* Use Flexbox for alignment */
-    flex-direction: column; /* Stack content vertically */
-    margin-top: 20px;
-    margin-left: 50px;
     margin-right: 60px;
 }
 
