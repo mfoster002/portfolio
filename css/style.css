@@ -28,7 +28,6 @@
     display: none;
     position: relative;
     flex-direction: column;
-    z-index: 10; /* Ensure the hamburger menu is above other elements */
 }
 
 #menuToggle input {
@@ -108,6 +107,70 @@
 
     #menuToggle input:checked ~ #menu {
         display: block; /* Show the menu when the checkbox is checked */
+    }
+
+    #menuToggle {
+        z-index: 10; /* Ensure the hamburger menu is above other elements */
+        position: relative;
+    }
+    
+    #menu {
+        z-index: 9; /* Ensure the menu is above other elements */
+    }
+
+    /* Disable hover effects on project cards */
+    .project-card-homepage .project-content {
+        opacity: 1; /* Always show the content */
+        pointer-events: auto; /* Allow interaction */
+        background-color: transparent; /* Remove the dark overlay */
+        color: #0D1821; /* Use a readable text color */
+        position: static; /* Make the content flow naturally */
+        text-align: left; /* Align text to the left */
+        padding: 10px; /* Add padding for spacing */
+    }
+
+    .project-card-homepage .project-content h3 {
+        font-size: 20px; /* Adjust font size for titles */
+        margin-bottom: 5px; /* Add spacing below the title */
+    }
+
+    .project-card-homepage .project-content p {
+        font-size: 14px; /* Adjust font size for descriptions */
+        margin: 0; /* Remove extra margins */
+    }
+
+    /* Adjust the project card layout */
+    .project-card-homepage {
+        display: flex; /* Use Flexbox for layout */
+        flex-direction: column; /* Stack content vertically */
+        align-items: flex-start; /* Align content to the left */
+        padding: 10px; /* Add padding */
+        box-shadow: none; /* Remove hover shadow */
+    }
+
+    .project-card-homepage .project-image img {
+        width: 100%; /* Ensure the image spans the full width */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 10px; /* Add spacing below the image */
+    }
+
+    /* Disable hover effects on project cards */
+    .project-card-homepage .project-content {
+        opacity: 1 !important; /* Always show the content */
+        pointer-events: auto; /* Allow interaction */
+        background-color: transparent !important; /* Remove the dark overlay */
+        color: #0D1821; /* Use a readable text color */
+        position: static; /* Make the content flow naturally */
+        text-align: left; /* Align text to the left */
+        padding: 10px; /* Add padding for spacing */
+    }
+
+    .project-card-homepage:hover .project-content {
+        opacity: 1 !important; /* Ensure hover does not change opacity */
+    }
+
+    .project-card-homepage .project-image img {
+        transform: none !important; /* Disable image zoom on hover */
     }
 }
 
