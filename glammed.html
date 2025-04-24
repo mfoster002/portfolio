@@ -8,6 +8,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        ul {
+            margin: 10px 0; /* Reduce vertical spacing above and below the list */
+            padding-left: 20px; /* Keep some padding for indentation */
+        }
+
+        ul li {
+            margin-bottom: 5px; /* Reduce spacing between list items */
+            line-height: 1.4; /* Adjust line height for tighter spacing */
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -37,13 +48,11 @@
 </div>
 <h1>Glammed</h1>
 
-<!-- GIF and Project Overview -->
-<div class="horizontal-layout">
-    <!-- GIF -->
-    <img src="images/glammedlogin.jpg" alt="Glammed project preview" class="gif-image">
-
+<section class="project-card">
+    <img src="images/glammedlogin.jpg" alt="Glammed project preview" class="under-title-image">
+</section>
     <!-- Project Overview Card -->
-    <div class="project-overview-card">
+    <section class="project-card">
         <h2>Project Overview</h2>
         <p>
             Glammed is more than just a beauty app—it's a platform designed to celebrate individuality and empower users to feel confident in their beauty journey. By offering inclusive tutorials and a user-friendly interface, Glammed ensures that everyone, regardless of gender or skill level, can explore and express their unique style.
@@ -54,6 +63,7 @@
             <li><strong>Accessibility Enhancements:</strong> High-contrast designs and captions for inclusivity.</li>
             <li><strong>Customizable Learning Paths:</strong> Choose tutorials that match your pace and preferences.</li>
         </ul>
+    </section> 
     </div>
 </div>
 
