@@ -49,6 +49,8 @@
     top: 60px;
     left: 0;
     background: #8ca3c1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add box shadow */
+
     width: 100%;
     list-style: none;
     padding: 20px 0;
@@ -93,7 +95,7 @@
         position: absolute;
         top: 60px;
         left: 0;
-        background:#BFCC94;
+        background:#B4CDED;
         width: 100%;
         list-style: none;
         padding: 20px 0;
@@ -104,6 +106,7 @@
         padding: 10px 0;
         text-align: center;
     }
+
 
     #menuToggle input:checked ~ #menu {
         display: block; /* Show the menu when the checkbox is checked */
@@ -171,6 +174,12 @@
     .project-card-homepage .project-image img {
         transform: none !important; /* Disable image zoom on hover */
     }
+
+    /* Change hover effect for menu items */
+    #menu li a:hover {
+        border-bottom: 5px #ffffff solid;
+    }
+
 }
 
 @media screen and (min-width: 801px) {
@@ -259,7 +268,7 @@
 /*text*/
 
 h1 {
-    color: 0D1821;
+    color: #0D1821;
     font-family: "DM Sans", sans-serif;
     text-align: left;
     padding-left: 60px;;
@@ -269,7 +278,7 @@ h1 {
 h2 {
     margin-top: 20px; /* Keep some spacing above */
     margin-bottom: 10px; /* Reduce spacing below */
-    padding: 5px; /* Adjust padding for consistency */
+    padding: 5px; 
     font-family: "DM Sans", sans-serif;
     color: #383e22;
 }
@@ -280,6 +289,7 @@ h3{
 
 p{
     font-family: "dm sans", sans-serif;
+    line-height: 1.6;
     padding: 20px;
 }
 
@@ -343,6 +353,8 @@ body {
 @media screen and (max-width: 500px) {
     header {
         height: 75px;
+        text-align: center;
+        justify-content: center;
     }
 }
 
@@ -376,11 +388,7 @@ header h2 {
         margin: 0;
         font-size: 25px;
     }
-
-    .pages-title {
-        font-size: 30px;
-        color: #344966;
-    }
+    
 }
 
 header h3 {
@@ -430,36 +438,19 @@ img {
     border: 2px solid;
     border-radius: 8px;
     color: #0D1821;
-    width: 25%;
-    padding: 15px 32px;
+    padding: 10px 20px; 
     text-align: center;
     text-decoration: none;
     font-size: 16px;
     font-family: "DM Sans", sans-serif;
     align-self: center; 
-    margin-top: 15px; /* Add spacing above the button */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
+    white-space: nowrap; 
+    max-width: 100%; 
+    overflow: hidden; /* Prevent content overflow */
 }
 
 .button-link:hover {
     background-color: #9bb34a;
-}
-
-.green-button {
-    background-color: #28a745; /* Replace with your specific green color */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    text-transform: uppercase;
-}
-
-.green-button:hover {
-    background-color: #218838; /* Darker green for hover effect */
 }
 
 /*WORK PAGE*/
@@ -544,10 +535,10 @@ img {
 }
 
 .project-card h2 {
-    font-size: 30px; 
-    color: #25374f;
-    margin-bottom: 2px;
-    text-underline-offset: 3px;
+    text-align: left; /* Ensure headings are aligned to the left */
+    font-size: 30px; /* Adjust font size if needed */
+    color: #25374f; /* Keep the existing color */
+    margin-bottom: 10px; /* Add spacing below the heading */
 }
 
 .project-card h3 {
@@ -809,6 +800,28 @@ ul li {
 
     .project-card-homepage .project-image img {
         transform: none !important; /* Disable image zoom on hover */
+    }
+
+    h1 {
+        font-size: 40px; 
+        text-align: center; 
+        padding-left: 0; 
+        padding-top: 10px;
+    }
+
+    header {
+        display: flex; =
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        text-align: center; /* Center-align the text */
+        height: 75px; 
+        padding: 0; /* Remove extra padding */
+    }
+
+    header h1 {
+        font-size: 24px; 
+        color: #ffffff; 
+        margin: 0;
     }
 }
 
