@@ -8,7 +8,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
- 
+    <style>
+        @media screen and (min-width: 1024px) {
+            .text-container, .project-card p, .project-card li, .project-card h2, .project-card h3 {
+                max-width: 75ch; /* Limit text width to 75 characters */
+                margin: 0 auto; /* Center the text block */
+                text-align: left; /* Ensure text is left-aligned */
+            }
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -65,12 +73,7 @@
 </div>
 <div class="project-card">
     <h2>Developing a User Persona Made the Problem Clear</h2>
-    <p>
-        Managing medications isn’t always easy—especially when life is busy.<br>
-        People forget doses, get overwhelmed by complex schedules, or drop off<br>
-        apps that ask for too much. I wanted to explore how design could step in<br>
-        and <strong>ease that experience with empathy, and simplicity</strong>.
-    </p>
+
     <p>
         Managing medications can feel overwhelming—especially for young adults juggling busy lives. Missed doses, confusing schedules, and overly complicated apps often add to the frustration. With Pillzy, I set out to design a solution that simplifies the process, offering clarity, empathy, and a touch of joy to health management.
     </p>
@@ -124,7 +127,7 @@
 <!-- Final Design -->
 <section class="project-card">
     <h2>Final Design</h2>
-    The final design is a celebration of user feedback, blending functionality with a clean, modern aesthetic. A vibrant color palette, clear typography, and playful emojis create an experience that feels approachable, engaging, and uniquely tailored to young adults.
+    <p>The final design is a celebration of user feedback, blending functionality with a clean, modern aesthetic. A vibrant color palette, clear typography, and playful emojis create an experience that feels approachable, engaging, and uniquely tailored to young adults.
     </p>
     <div class="final-design-container">
         <img src="images/pillzyfinal1.jpg" alt="Final Design 1" class="final-design-image">

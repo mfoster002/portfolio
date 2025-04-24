@@ -545,7 +545,7 @@ img {
 
 .project-card h2 {
     font-size: 30px; 
-    color: #4e698e;
+    color: #25374f;
     margin-bottom: 2px;
     text-underline-offset: 3px;
 }
@@ -563,8 +563,7 @@ img {
 }
 
 .project-card p {
-    margin: 10px 0; /* Reduce vertical spacing between paragraphs */
-    line-height: 1.4; /* Adjust line height for tighter spacing */
+    margin:0;
 }
 
 .gif-container img {
