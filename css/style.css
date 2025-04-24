@@ -566,6 +566,11 @@ img {
     margin:0;
 }
 
+.project-card strong {
+    color:#383e22; /* Replace with your desired color */
+    font-weight: bold; /* Ensure the text remains bold */
+}
+
 .gif-container img {
     width: 100%;
     height: auto; 
@@ -615,6 +620,12 @@ img {
     font-size: 18px; /* Adjust font size for list items */
     color: #000000; /* Text color */
 }
+
+ul li {
+    margin-bottom: 30px; /* Add spacing below each bullet point */
+    line-height: 2; /* Improve readability */
+}
+
 
 /* User Testing Container */
 .user-testing-container {
