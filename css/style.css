@@ -547,7 +547,6 @@ img {
     font-size: 30px; 
     color: #4e698e;
     margin-bottom: 2px;
-    text-decoration: underline wavy #B4CDED ;
     text-underline-offset: 3px;
 }
 
@@ -745,6 +744,61 @@ img {
         max-width: 400px; /* Set a maximum width for the images */
         height: auto; /* Maintain aspect ratio */
         margin: 0 auto; /* Center the images */
+    }
+
+    /* Adjust the project card layout for mobile */
+    .project-card-homepage {
+        display: flex; /* Use Flexbox for layout */
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center-align the content */
+        padding: 10px; /* Add padding */
+        box-shadow: none; /* Remove hover shadow */
+        background-color: #ffffff; /* Ensure a clean background */
+        margin: 10px auto; /* Add spacing between cards */
+        width: 90%; /* Make the cards span most of the screen width */
+    }
+
+    .project-card-homepage a {
+        display: flex; /* Ensure the link spans the entire card */
+        flex-direction: column; /* Stack the image and text vertically */
+        align-items: center; /* Center-align the content */
+        text-decoration: none; /* Remove underline from links */
+        color: inherit; /* Inherit text color */
+    }
+
+    .project-card-homepage .project-image img {
+        width: 100%; /* Make the image span the full width */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 10px; /* Add spacing below the image */
+    }
+
+    .project-card-homepage .project-content {
+        position: static; /* Remove absolute positioning */
+        opacity: 1; /* Always show the content */
+        pointer-events: auto; /* Allow interaction */
+        background-color: transparent; /* Remove the dark overlay */
+        color: #0D1821; /* Use a readable text color */
+        text-align: center; /* Center-align the text */
+        padding: 10px; /* Add padding for spacing */
+    }
+
+    .project-card-homepage .project-content h3 {
+        font-size: 18px; /* Adjust font size for titles */
+        margin-bottom: 5px; /* Add spacing below the title */
+    }
+
+    .project-card-homepage .project-content p {
+        font-size: 14px; /* Adjust font size for descriptions */
+        margin: 0; /* Remove extra margins */
+    }
+
+    /* Disable hover effects on mobile */
+    .project-card-homepage:hover .project-content {
+        opacity: 1 !important; /* Ensure hover does not change opacity */
+    }
+
+    .project-card-homepage .project-image img {
+        transform: none !important; /* Disable image zoom on hover */
     }
 }
 
