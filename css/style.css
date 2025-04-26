@@ -1,12 +1,199 @@
-/*NAV & HAMBURGER MENU*/
-.nav {
-    text-align: right;
-    margin-bottom: 0;
-    height: 40px;
-    padding: 25px;
-    padding-bottom: 0;
-    font-weight: bold;
+/* General Styles */
+body {
+    background-color: #f0f4ef;
+    font-size: 18px;
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-top: 40px; /* Add space between the nav bar and the heading */
+    font-size: 60px; /* Keep the font size consistent */
+    text-align: left; /* Align the text to the left */
+    padding-left: 60px; /* Maintain the left padding */
+    color: #0D1821; /* Keep the text color consistent */
+}
+
+h2 {
+    font-size: 30px;
+    color: #383e22;
+    margin: 20px 0 10px;
+}
+
+h3 {
+    font-size: 20px;
+    color: #4e698e;
+}
+
+p {
+    font-size: 18px;
+    color: #0D1821;
+    padding: 20px 0;
+}
+
+/* Navigation */
+.nav {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Space out the nav items and hamburger menu */
+    align-items: center; /* Center the items vertically */
+    padding: 25px 20px; /* Add padding for spacing */
+    font-weight: bold; /* Keep the font bold */
+}
+
+.nav a {
+    text-decoration: none;
+    color: #0a3253;
+}
+
+.nav a:hover {
+    color: #4e698e;
+    border-bottom: 5px #8ca3c1 solid;
+}
+
+/* Hamburger Menu */
+#menuToggle {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    cursor: pointer; 
+    position: absolute; 
+    top: 20px; /* Adjust the vertical position */
+  transform: translateX(-60%); /* Offset by half its width for perfect centering */
+    z-index: 10; /* Ensure it appears above other elements */
+    width: 200px;
+}
+
+#menuToggle input {
+    display: none;
+}
+
+#menuToggle span {
+    display: block;
+    width: 30px; /* Set the width of the hamburger lines */
+    height: 3px; /* Set the height of the hamburger lines */
+    margin: 5px 0; /* Add spacing between the lines */
+    background: #0D1821; /* Set the color of the hamburger lines */
+    transition: background 0.3s, transform 0.3s; /* Add smooth transitions */
+}
+
+
+
+#menu li {
+    padding: 15px 0; /* Increase spacing between items */
+    text-align: center; /* Center-align the menu items */
+}
+
+#menuToggle input:checked ~ #menu {
+    display: block; /* Show the menu when the checkbox is checked */
+}
+
+#menuToggle input:checked ~ span {
+    background: #9bb34a;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    height: 75px; 
+    padding: 0; /* Remove extra padding */
+    position: relative;
+    background-image: url("../images/streetlights.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: left;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+header h1 {
+    font-size: 35px;
+    color: #ffffff;
+    text-align: right;
+    z-index: 2;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Text Blocks */
+
+.text-block1 {
+    background: radial-gradient(circle, rgba(242, 246, 243, 1) 0%, rgba(180, 205, 237, 1) 100%);
+    color: #0D1821;
+    border-top: 5px solid #0D1821;
+    padding: 20px;
+}
+.text-block1 h2 {
+    color: #0D1821;
+}
+
+/* Buttons */
+.button-link {
+    display: inline-block;
+    background-color: #BFCC94;
+    border: 2px solid;
+    border-radius: 8px;
+    color: #0D1821;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+    margin-bottom: 30px; 
+}
+
+.button-link:hover {
+    background-color: #9bb34a;
+}
+
+/* Project Cards HOMEPAGE*/
+
+.project-card, .project-card-homepage {
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.align {
+    align-items: left;
+}
+.project-card-homepage {
+    display: flex; /* Use Flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center-align the content */
+    width: 90%; /* Set the width of the card */
+    background-color: #ffffff; /* Ensure a clean background */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    overflow: hidden; /* Prevent content from spilling out */
+    margin: 20px auto; /* Add spacing between cards */
+    padding: 20px; /* Add padding inside the card */
+}
+
 
 /* Navigation Links */
 .nav a {
@@ -25,9 +212,13 @@
 /*Hamburger*/
 
 #menuToggle {
-    display: none;
-    position: relative;
-    flex-direction: column;
+    display: flex; /* Ensure the hamburger menu is displayed */
+    flex-direction: column; /* Stack the lines vertically */
+    align-items: center; /* Center-align the lines */
+    cursor: pointer; /* Change the cursor to a pointer */
+    position: relative; /* Position relative for proper alignment */
+    z-index: 10; /* Ensure it appears above other elements */
+    margin-left: auto; /* Push the hamburger menu to the far right */
 }
 
 #menuToggle input {
@@ -36,243 +227,47 @@
 
 #menuToggle span {
     display: block;
-    width: 30px;
-    height: 3px;
-    margin: 5px auto;
-    background: #0D1821;
-    transition: background 0.3s, transform 0.3s;
+    width: 30px; /* Set the width of the hamburger lines */
+    height: 3px; /* Set the height of the hamburger lines */
+    margin: 5px 0; /* Add spacing between the lines */
+    background: #0D1821; /* Set the color of the hamburger lines */
+    transition: background 0.3s, transform 0.3s; /* Add smooth transitions */
 }
 
 #menu {
-    display: none;
+    display: none; /* Initially hide the menu */
     position: absolute;
-    top: 60px;
-    left: 0;
-    background: #8ca3c1;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add box shadow */
-
-    width: 100%;
-    list-style: none;
-    padding: 20px 0;
+    top: 60px; /* Position the menu below the hamburger icon */
+    right: 0; /* Align the menu to the right */
+    background: #8ca3c1; /* Set the background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+    width: 200px; /* Set a fixed width for the menu */
+    list-style: none; /* Remove default list styling */
+    padding: 20px 0; /* Add padding inside the menu */
+    z-index: 9; /* Ensure it appears above other elements */
 }
 
 #menu li {
-    padding: 10px 0;
-    text-align: center;
+    padding: 15px 0; /* Increase spacing between items */
+    text-align: center; /* Center-align the menu items */
 }
 
 #menuToggle input:checked ~ #menu {
-    display: block;
+    display: block; /* Show the menu when the checkbox is checked */
 }
 
 #menuToggle input:checked ~ span {
     background: #9bb34a;
 }
 
-@media screen and (max-width: 800px) {
-    .bigscreen-menu {
-        display: none; 
-    }
-
-    #menuToggle {
-        display: flex; 
-        flex-direction: column;
-        align-items: center;
-        cursor: pointer;
-    }
-
-    #menuToggle span {
-        display: block;
-        width: 30px;
-        height: 3px;
-        margin: 5px 0;
-        background: #0D1821; /* Color of the hamburger lines */
-        transition: background 0.3s, transform 0.3s;
-    }
-
-    #menu {
-        display: none; /* Initially hide the menu */
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background:#B4CDED;
-        width: 100%;
-        list-style: none;
-        padding: 20px 0;
-        z-index: 10;
-    }
-
-    #menu li {
-        padding: 10px 0;
-        text-align: center;
-    }
-
-
-    #menuToggle input:checked ~ #menu {
-        display: block; /* Show the menu when the checkbox is checked */
-    }
-
-    #menuToggle {
-        z-index: 10; /* Ensure the hamburger menu is above other elements */
-        position: relative;
-    }
-    
-    #menu {
-        z-index: 9; /* Ensure the menu is above other elements */
-    }
-
-    /* Disable hover effects on project cards */
-    .project-card-homepage .project-content {
-        opacity: 1; /* Always show the content */
-        pointer-events: auto; /* Allow interaction */
-        background-color: transparent; /* Remove the dark overlay */
-        color: #0D1821; /* Use a readable text color */
-        position: static; /* Make the content flow naturally */
-        text-align: left; /* Align text to the left */
-        padding: 10px; /* Add padding for spacing */
-    }
-
-    .project-card-homepage .project-content h3 {
-        font-size: 20px; /* Adjust font size for titles */
-        }
-
-    .project-card-homepage .project-content p {
-        font-size: 14px; /* Adjust font size for descriptions */
-        margin: 0; /* Remove extra margins */
-    }
-
-    /* Adjust the project card layout */
-    .project-card-homepage {
-        display: flex; /* Use Flexbox for layout */
-        flex-direction: column; /* Stack content vertically */
-        align-items: flex-start; /* Align content to the left */
-        padding: 10px; /* Add padding */
-        box-shadow: none; /* Remove hover shadow */
-    }
-
-    .project-card-homepage .project-image img {
-        width: 100%; 
-        height: auto; 
-        margin-bottom: 10px; 
-    }
-
-    /* Disable hover effects on project cards */
-    .project-card-homepage .project-content {
-        opacity: 1 !important; /* Always show the content */
-        pointer-events: auto; /* Allow interaction */
-        background-color: transparent !important; /* Remove the dark overlay */
-        color: #0D1821; /* Use a readable text color */
-        position: static; /* Make the content flow naturally */
-        text-align: left; /* Align text to the left */
-        padding: 10px; /* Add padding for spacing */
-    }
-
-    .project-card-homepage:hover .project-content {
-        opacity: 1 !important; /* Ensure hover does not change opacity */
-    }
-
-    .project-card-homepage .project-image img {
-        transform: none !important; /* Disable image zoom on hover */
-    }
-
-    /* Change hover effect for menu items */
-    #menu li a:hover {
-        border-bottom: 5px #ffffff solid;
-    }
-
-}
-
-@media screen and (min-width: 801px) {
-    #menuToggle {
-        display: none; /* Hide the hamburger menu on larger screens */
-    }
-
-    .bigscreen-menu {
-        display: flex; /* Show the bigscreen menu on larger screens */
-    }
-
-    .project-card-homepage {
-        position: relative; /* Ensure the overlay is positioned correctly */
-        overflow: hidden; /* Prevent content from spilling out */
-    }
-
-    .project-card-homepage .project-content {
-        position: absolute; /* Position the overlay over the image */
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent overlay */
-        color: #ffffff; /* White text color for contrast */
-        opacity: 0; /* Initially hidden */
-        pointer-events: none; /* Prevent interaction when hidden */
-        transition: opacity 0.3s ease; /* Smooth fade-in effect */
-        text-align: center;
-        padding: 20px;
-        z-index: 1; /* Ensure the overlay is above the image */
-    }
-
-    .project-card-homepage:hover .project-content {
-        opacity: 1; /* Show the overlay on hover */
-        pointer-events: auto; /* Allow interaction when visible */
-    }
-
-    .project-card-homepage .project-image img {
-        transition: transform 0.3s ease; /* Smooth zoom effect */
-    }
-
-    .project-card-homepage:hover .project-image img {
-        transform: scale(1.1); /* Slight zoom on hover */
-    }
-}
-/*Intro*/
-
-.intro {
-    text-align: center; 
-    margin: 0 auto; 
-    padding: 10px 20px; 
-    max-width: 100%;
-    background-color: #B4CDED;
-    margin-top: 5px; 
-
-}
-
-.intro p {
-    font-size: 25px; 
-    color: #0D1821;
-    margin: 0 0 20px; 
-    line-height: 1.6; 
-    font-family: dm sans, sans-serif;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-.intro {
-    animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 /*text*/
 
 h1 {
-    color: #0D1821;
-    font-family: "DM Sans", sans-serif;
-    text-align: left;
-    padding-left: 60px;;
-    font-size: 70px;
+    margin-top: 20px; /* Add space between the nav bar and the heading */
+    font-size: 70px; /* Keep the font size consistent */
+    text-align: left; /* Align the text to the left */
+    padding-left: 60px; /* Maintain the left padding */
+    color: #0D1821; /* Keep the text color consistent */
 }
 
 h2 {
@@ -298,25 +293,7 @@ body {
     font-size: 18px; 
 }
 
-.text-block1 {
-    background: rgb(242, 246, 243);
-    background: radial-gradient(circle, rgba(242, 246, 243, 1) 0%, rgba(180, 205, 237, 1) 100%);
-    color: #0D1821;
-    padding: 20px;
-    font-family: "DM Sans", sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: center;
-    margin: 0;
-    border-top: 5px solid #0D1821;
-}
-.text-block1 h2{
-    color:#0D1821;
-}
 
-.text-block1 h3{
-   color: #1f3545;
-}
 
 .text-block2 {
     background-color: #1c2934;
@@ -332,6 +309,7 @@ body {
 
 .text-block2 h2{
     color:#B4CDED;
+    font-weight: 400;
 }
 
 .text-block2 h3{
@@ -350,45 +328,26 @@ body {
     padding-top: 20px;
 }
 
-@media screen and (max-width: 500px) {
-    header {
-        height: 75px;
-        text-align: center;
-        justify-content: center;
-    }
-}
-
-.main-header h1 {
-    font-size: 80px;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    z-index: 2;
-}
+header {
+    display: flex; /* Use Flexbox for layout */
+    height: 35px; /* Set the height of the header */
+    padding: 0 20px; /* Add padding for spacing */
+    background-image: url("../images/streetlights.gif");
+    background-repeat: no-repeat;
+    background-size: cover;}
 
 header h1 {
-    font-size: 35px;
-    color: rgb(255, 255, 255);
-    text-align: right;
-    margin-right: 50px;
-    padding: 0;
-    position: relative;
-    z-index: 2;
+    font-size: 35px; /* Adjust font size */
+    color: #ffffff; /* Ensure the text is white for contrast */
+    text-align: right; /* Align the text to the right */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+    z-index: 2; /* Ensure the text is above the background */
 }
 
 header h2 {
     font-family: "DM Sans", sans-serif;
     color: #0D1821;
-}
-
-@media screen and (max-width: 900px) {
-    header h1 {
-        margin: 0;
-        font-size: 25px;
-    }
-    
 }
 
 header h3 {
@@ -398,19 +357,7 @@ header h3 {
     color: white;
 }
 
-header {
-    position: relative;
-    background-image: url("../images/streetlights.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: left;
-    height: 100px
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0; 
-    padding: 0;
-}
+
 
 header::before {
     content: "";
@@ -424,11 +371,14 @@ header::before {
 
 /*IMAGES*/
 img {
-    width:100%;
+    width: 100%; /* Ensure the image spans the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0; /* Remove any default margins */
+    padding: 0; /* Remove any padding */
+    border: none; /* Remove any borders */
+    box-shadow: none; /* Remove any shadows */
 }
-.under-title-image {
-    width: 60%;
-}
+
 
 /*BUTTONS*/
 
@@ -447,6 +397,7 @@ img {
     white-space: nowrap; 
     max-width: 100%; 
     overflow: hidden; /* Prevent content overflow */
+    margin-bottom: 20px; /* Add breathing room below the button */
 }
 
 .button-link:hover {
@@ -455,40 +406,42 @@ img {
 
 /*WORK PAGE*/
 .projects-grid {
-    display: grid;
-    grid-template-columns: 1fr; 
-    gap: 20px;
-    padding: 20px;
+    display: flex; /* Use Flexbox for layout */
+    flex-direction: column; /* Stack the cards vertically */
+   
+    align-items: center; /* Center the cards horizontally */
+    gap: 20px; /* Add spacing between the cards */
+
 }
 
 .project-card {
-    flex: 1;
-    background-color: #ffffff; 
-    border-radius: 8px; 
-    height: auto; 
-    font-family: "DM Sans", sans-serif; 
-    color: #0D1821;
-    display: flex; 
-    flex-direction: column;
-    margin: 20px auto; 
-    max-width: 90%; 
-    padding: 20px; 
-    overflow: hidden; 
-    box-sizing: border-box; 
+    display: flex; /* Use Flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    align-items: left;
+    justify-content: center; /* Center-align vertically */
+    background-color: #ffffff; /* Clean white background */
+    border-radius: 16px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Add padding inside the card */
+    margin: 20px auto; /* Add spacing between cards */
+    max-width: 400px; /* Limit the width for better readability */
+    text-align: center; /* Center-align text inside the card */
 }
 
 .project-image img {
     width: 100%; 
     height: auto; 
     object-fit: cover; 
-    transition: transform 0.3s ease; 
+    border-radius: 8px; 
+    transition: transform 0.3s ease; /* Add a hover effect */
 }
 
-.project-card:hover .project-image img {
-    transform: scale(1.1); /* Slight zoom on hover */
+.project-card-homepage:hover .project-image img {
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
-.project-content {
+/*hover overlay on homepage*/
+.project-image-tile {
     position: absolute; /* Position the content over the image */
     top: 0;
     left: 0;
@@ -504,16 +457,31 @@ img {
     pointer-events: none; /* Disable interaction by default */
     transition: opacity 0.3s ease; /* Smooth fade-in effect */
     text-align: center; 
-    padding: 20px;
     z-index: 1; 
     font-family: "DM Sans", sans-serif;
 }
 
-.project-card:hover .project-content {
+/*font size for the title */
+.project-image-tile h3 {
+    font-size: 50px; 
+    font-weight: bold; 
+    color: #ffffff; 
+    margin: 0;
+}
+
+.project-image-tile p {
+    font-size: 30px; /* Adjust font size for the description */
+    line-height: 1.6; /* Improve readability */
+    margin: 0; /* Remove default margins */
+    color: #ffffff; /* Ensure the description is white */
+}
+
+.project-card:hover .project-image-tile {
     opacity: 1; /* Show the content on hover */
     pointer-events: auto; /* Enable interaction when visible */
 }
 
+/*this turns tile into a link*/
 .project-card a {
     position: relative; /* Ensure the link is clickable */
     z-index: 2; /* Place the link above the overlay */
@@ -521,24 +489,17 @@ img {
     color: inherit; /* Inherit text color */
 }
 
-.project-content h3 {
-    font-size: 80px;
-}
-
-.project-content p {
-    font-size: 50px;
-}
-
-.project-content h3, .project-content p {
+.project-image-tile h3, .project-image-tile p {
     z-index: 2; /* Ensure text is above the overlay */
     pointer-events: auto; /* Allow text to be clickable if needed */
 }
 
+/*cards used on prototype sub-pages*/
 .project-card h2 {
-    text-align: left; /* Ensure headings are aligned to the left */
-    font-size: 30px; /* Adjust font size if needed */
-    color: #25374f; /* Keep the existing color */
-    margin-bottom: 10px; /* Add spacing below the heading */
+    text-align: left; 
+    font-size: 30px; 
+    color: #25374f; 
+    margin-bottom: 10px;
 }
 
 .project-card h3 {
@@ -558,13 +519,8 @@ img {
 }
 
 .project-card strong {
-    color:#383e22; /* Replace with your desired color */
-    font-weight: bold; /* Ensure the text remains bold */
-}
-
-.gif-container img {
-    width: 100%;
-    height: auto; 
+    color:#383e22; 
+    font-weight: bold; 
 }
 
 .project-text h2 {
@@ -581,42 +537,9 @@ img {
 /* GIF Container Styling */
 
 .gif-image {
-    width: 100%; /* Make the GIF span the full width of its container */
-    max-width: 400px; /* Set a maximum width for the GIF */
+    width: 100%; /* Ensure the image spans the full width of its container */
     height: auto; /* Maintain aspect ratio */
 }
-
-.text-container h2 {
-    font-size: 24px; /* Adjust font size for the title */
-    margin-bottom: 10px; /* Add spacing below the title */
-    color: #4e698e; /* Title color */
-}
-
-.text-container p {
-    font-size: 18px; /* Adjust font size for the paragraph */
-    line-height: 1.6; /* Improve readability */
-    margin-bottom: 20px; /* Add spacing below the paragraph */
-    color: #000000; /* Text color */
-}
-
-.text-container h3 {
-    font-size: 20px; /* Adjust font size for the subtitle */
-    margin-bottom: 10px; /* Add spacing below the subtitle */
-    color: #4e698e; /* Subtitle color */
-}
-
-.text-container ul {
-    list-style-type: disc; /* Use disc bullets */
-    padding-left: 20px; /* Add padding for the list */
-    font-size: 18px; /* Adjust font size for list items */
-    color: #000000; /* Text color */
-}
-
-ul li {
-    margin-bottom: 30px; /* Add spacing below each bullet point */
-    line-height: 2; /* Improve readability */
-}
-
 
 /* User Testing Container */
 .user-testing-container {
@@ -657,15 +580,16 @@ ul li {
 
 /* Final Design Container */
 .final-design-container {
-    display: flex; /* Use Flexbox to align images horizontally */
-    justify-content: center; /* Center the images horizontally */
-    gap: 20px; /* Add spacing between the images */
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+    gap: 20px; /* Add spacing between the columns */
+    justify-content: center; /* Center the grid horizontally */
     margin: 20px 0; /* Add spacing above and below the container */
 }
 
 /* Final Design Image */
 .final-design-image {
-    width: 400px; /* Set a smaller width for the images */
+    width: 150%; /* Ensure the images fill their grid cells */
     height: auto; /* Maintain aspect ratio */
     border-radius: 8px; /* Add rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
@@ -678,16 +602,16 @@ ul li {
 
 /* Wireframes Container */
 .wireframes-container {
-    display: flex; /* Use Flexbox for layout */
-    justify-content: center; /* Center the wireframes horizontally */
-    gap: 20px; /* Add spacing between the wireframes */
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+    gap: 20px; /* Add spacing between the columns */
+    justify-content: center; /* Center the grid horizontally */
     margin: 20px 0; /* Add spacing above and below the container */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 /* Wireframe Images */
 .wireframe-image {
-    width: 300px; /* Set a default width for the wireframes */
+    width: 100%; /* Ensure the images fill their grid cells */
     height: auto; /* Maintain aspect ratio */
     border-radius: 8px; /* Add rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
@@ -730,8 +654,8 @@ ul li {
     }
 
     .image-caption {
-        font-size: 14px; /* Adjust font size for better readability */
-        margin-top: 10px; /* Add spacing above the caption */
+        font-size: 14px;
+        margin-top: 10px; 
     }
 
     .final-design-container {
@@ -773,7 +697,7 @@ ul li {
         margin-bottom: 10px; /* Add spacing below the image */
     }
 
-    .project-card-homepage .project-content {
+    .project-card-homepage .project-image-tile {
         position: static; /* Remove absolute positioning */
         opacity: 1; /* Always show the content */
         pointer-events: auto; /* Allow interaction */
@@ -783,18 +707,20 @@ ul li {
         padding: 10px; /* Add padding for spacing */
     }
 
-    .project-card-homepage .project-content h3 {
-        font-size: 18px; /* Adjust font size for titles */
+    .project-card-homepage .project-image-tile h3 {
+        font-size: 18px; 
+        color: #0D1821;
         margin-bottom: 5px; /* Add spacing below the title */
     }
 
-    .project-card-homepage .project-content p {
+    .project-card-homepage .project-image-tile p {
         font-size: 14px; /* Adjust font size for descriptions */
+        color: #0D1821;
         margin: 0; /* Remove extra margins */
     }
 
     /* Disable hover effects on mobile */
-    .project-card-homepage:hover .project-content {
+    .project-card-homepage:hover .project-image-tile {
         opacity: 1 !important; /* Ensure hover does not change opacity */
     }
 
@@ -810,7 +736,7 @@ ul li {
     }
 
     header {
-        display: flex; =
+        display: flex;
         justify-content: center; /* Center horizontally */
         align-items: center; /* Center vertically */
         text-align: center; /* Center-align the text */
@@ -842,10 +768,13 @@ ul li {
   }
   
   .card-img {
-    width: 255px;
-    height: 255PX;
-    border-radius: 50%;
-    margin-bottom: 15px;
+    display: block; /* Ensure the image is treated as a block element */
+    margin: 0 auto; /* Center the image horizontally */
+    width: 255px; /* Set the desired width */
+    height: 255px; /* Set the desired height */
+    border-radius: 20%; 
+    margin-top: 20px; 
+    margin-bottom: 20px; /* Add spacing below the image */
   }
 
   .card-description {
@@ -856,39 +785,6 @@ ul li {
 
 
   /*Contact Page*/
-.contact-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: auto;
-    background-color: #BFCC94;
-    border: 5px solid #B4CDED;
-    border-bottom: 0;
-}
-
-.contact-image {
-    flex: 1; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.contact-image img {
-    width: 50%;
-    height: auto;
-    object-fit: cover; 
-}
-
-.connect-card {
-    flex: 1;
-    background-color: #B4CDED;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-family:;
-}
 
 .connect-card .button-link {
     margin-top: 20px;
@@ -908,25 +804,25 @@ ul li {
 
 /*PROJECT PAGE*/
 .wireframe-image {
-    width: 300px; /* Set the desired width */
+    width: 100%; /* Ensure the images fill their grid cells */
     height: auto; /* Maintain aspect ratio */
-    margin: 10px auto; /* Add spacing and center the images */
-    display: block; /* Ensure the images are centered */
-    border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 0.3s ease; /* Add a hover effect */
 }
 
 .wireframes-container {
-    display: flex; /* Use Flexbox to align items horizontally */
-    justify-content: center; /* Center the images horizontally */
-    gap: 20px; /* Add spacing between the images */
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+    gap: 20px; /* Add spacing between the columns */
+    justify-content: center; /* Center the grid horizontally */
     margin: 20px 0; /* Add spacing above and below the container */
 }
 
 .gif-image {
-    width: 25%; /* Set the desired width */
+    width: 25%; 
     height: auto; /* Maintain the aspect ratio */
-    display: block; /* Ensure the GIF is treated as a block element */
+    display: block; 
     margin-left: 50px;
     border-radius: 8px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
@@ -935,67 +831,36 @@ ul li {
 /*FOOTER*/
 
 .site-footer {
-    background-color: #0D1821; /* Dark background for contrast */
-    color: #f0f4ef; /* Light text color */
-    text-align: center; /* Center-align the content */
-    padding: 20px; /* Add padding for spacing */
-    font-family: "DM Sans", sans-serif; /* Use consistent font */
-    font-size: 15px; /* Set a readable font size */
+    background-color: #0D1821; 
+    color: #f0f4ef;
+    text-align: center; 
+    padding: 20px; 
+    font-family: "DM Sans", sans-serif; 
+    font-size: 15px; 
     position: relative; /* Ensure it stays in the layout flow */
     z-index: 1; /* Ensure it doesn’t overlap other elements */
 }
 
 /* Footer Links */
 .site-footer a {
-    color: #BFCC94; /* Light green for footer links */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Make links stand out */
+    color: #BFCC94; 
+    text-decoration: none; 
+    font-weight: bold; 
 }
 
 .site-footer a:hover {
-    color: #9bb34a; /* Slightly darker green on hover */
-    border-bottom: none; /* Ensure no underline or border appears */
+    color: #9bb34a; 
+    border-bottom: none; 
 }
 
 .site-footer p {
-    margin: 8px 0; /* Reduce vertical spacing between paragraphs */
-    padding: 0; /* Remove any padding */
-    line-height: 1.4; /* Adjust line spacing for better readability */
-    color: #f0f4ef; /* Ensure text color remains readable */
+    margin: 8px 0; 
+    padding: 0; 
+    line-height: 1.4; 
+    color: #f0f4ef; 
 }
 
-.social-media {
-    margin-top: 5px; /* Reduce spacing above the social media icons */
-    display: flex; /* Align icons horizontally */
-    gap: 8px; /* Reduce spacing between icons */
-}
 
-.social-media img {
-    width: 25px; /* Adjust icon size if needed */
-    height: 25px;
-    transition: transform 0.3s ease; /* Add hover animation */
-}
-
-.social-media img:hover {
-    transform: scale(1.2); /* Slightly enlarge icons on hover */
-}
-
-.social-media-icon img {
-    width: 80px;                 
-    height: 20px;
-    padding: 10px;
-}
-
-.insta-icon img{
-    width: 25px;
-    height: 25px;
-    padding: 10px;
-}
-
-.social-media-icon img, .insta-icon img {
-    display: inline-block; 
-    vertical-align: middle; 
-}
 
 iframe {
     width: 100%; /* Make the iframe span the full width */
@@ -1005,19 +870,14 @@ iframe {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
-/* Case Study Carousel */
-.case-study-carousel {
-    text-align: center;
-    margin: 20px auto;
-    max-width: 800px;
-    position: relative;
-}
 
 .carousel {
     position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 500px; /* Adjust height as needed */
+    overflow: hidden; /* Keep this to hide slides outside the visible area */
+    width: 100%; /* Ensure the carousel spans the full width */
+    max-width: 1200px; /* Set a maximum width for larger screens */
+    height: auto; /* Allow the height to adjust based on content */
+    margin: 0 auto; /* Center the carousel */
 }
 
 .carousel-slides {
@@ -1118,6 +978,302 @@ iframe {
     color: #383e22;
 }
 
+@media screen and (max-width: 800px) {
+    .bigscreen-menu {
+        display: none; 
+    }
+
+    #menuToggle {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    #menuToggle span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin: 5px 0;
+        background: #0D1821; /* Color of the hamburger lines */
+        transition: background 0.3s, transform 0.3s;
+    }
+
+    #menu {
+        display: none; /* Initially hide the menu */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background:white;
+        width: 100%;
+        list-style: none;
+        padding: 20px 0;
+        z-index: 10;
+    }
+
+    #menu li {
+        padding: 15px 0; /* Increase spacing between items */
+        text-align: center;
+    }
+
+
+    #menuToggle input:checked ~ #menu {
+        display: block; /* Show the menu when the checkbox is checked */
+    }
+
+    #menuToggle {
+        z-index: 10; /* Ensure the hamburger menu is above other elements */
+        position: relative;
+    }
+    
+    #menu {
+        z-index: 9; /* Ensure the menu is above other elements */
+    }
+
+    /* Disable hover effects on project cards */
+    .project-card-homepage .project-image-tile {
+        opacity: 1; /* Always show the content */
+        pointer-events: auto; /* Allow interaction */
+        background-color: transparent; /* Remove the dark overlay */
+        color: #0D1821; /* Use a readable text color */
+        position: static; /* Make the content flow naturally */
+        text-align: left; /* Align text to the left */
+        padding: 10px; /* Add padding for spacing */
+    }
+
+    .project-card-homepage .project-image-tile h3 {
+        font-size: 20px; /* Adjust font size for titles */
+        }
+
+    .project-card-homepage .project-image-tile p {
+        font-size: 14px; /* Adjust font size for descriptions */
+        margin: 0; /* Remove extra margins */
+    }
+
+    /* Adjust the project card layout */
+    .project-card-homepage {
+        display: flex; /* Use Flexbox for layout */
+        flex-direction: column; /* Stack content vertically */
+        align-items: flex-start; /* Align content to the left */
+        padding: 10px; /* Add padding */
+        box-shadow: none; /* Remove hover shadow */
+    }
+
+    .project-card-homepage .project-image img {
+        width: 100%; 
+        height: auto; 
+        margin-bottom: 10px; 
+    }
+
+    /* Disable hover effects on project cards */
+    .project-card-homepage .project-image-tile {
+        opacity: 1 !important; /* Always show the content */
+        pointer-events: auto; /* Allow interaction */
+        background-color: transparent !important; /* Remove the dark overlay */
+        color: #0D1821; /* Use a readable text color */
+        position: static; /* Make the content flow naturally */
+        text-align: left; /* Align text to the left */
+        padding: 10px; /* Add padding for spacing */
+    }
+
+    .project-card-homepage:hover .project-image-tile {
+        opacity: 1 !important; 
+    }
+
+    .project-card-homepage .project-image img {
+        transform: none !important; 
+    }
+
+    /* Change hover effect for menu items */
+    #menu li a:hover {
+        border-bottom: 5px #4e698e solid;
+    }
+
+}
+
+@media screen and (min-width: 801px) {
+    #menuToggle {
+        display: none; /* Hide the hamburger menu on larger screens */
+    }
+
+    .bigscreen-menu {
+        display: flex; /* Show the bigscreen menu on larger screens */
+    }
+
+    .project-card-homepage {
+        position: relative; /* Ensure the overlay is positioned correctly */
+        overflow: hidden; /* Prevent content from spilling out */
+    }
+
+    .project-card-homepage .project-image-tile {
+        position: absolute; /* Position the overlay over the image */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent overlay */
+        color: #ffffff; /* White text color for contrast */
+        opacity: 0; /* Initially hidden */
+        pointer-events: none; /* Prevent interaction when hidden */
+        transition: opacity 0.3s ease; /* Smooth fade-in effect */
+        text-align: center;
+        padding: 20px;
+        z-index: 1; /* Ensure the overlay is above the image */
+    }
+
+    .project-card-homepage:hover .project-image-tile {
+        opacity: 1; /* Show the overlay on hover */
+        pointer-events: auto; /* Allow interaction when visible */
+    }
+
+    .project-card-homepage .project-image img {
+        transition: transform 0.3s ease; /* Smooth zoom effect */
+    }
+
+    .project-card-homepage:hover .project-image img {
+        transform: scale(1.1); /* Slight zoom on hover */
+    }
+}
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 24px;
+        margin: 0;
+        align-items: center;
+    }
+
+    .project-card-homepage {
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .project-card-homepage .project-image-tile {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header {
+        height: 75px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 40px;
+        text-align: center;
+        padding-top: 10px;
+    }
+}
+@media screen and (max-width: 500px) {
+    header {
+        height: 75px;
+        text-align: center;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 900px) {
+    header h1 {
+        margin: 0;
+        font-size: 25px;
+    }
+    
+}
+
+/* Project Cards (Not Homepage) */
+.project-card {
+    background-color: #ffffff; /* Clean white background */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Add padding for spacing */
+    margin: 20px auto; /* Add spacing between cards */
+    max-width: 800px; /* Limit the width for better readability */
+    font-family: "DM Sans", sans-serif; /* Consistent font */
+    color: #0D1821; /* Text color for readability */
+    line-height: 1.6; /* Improve line spacing */
+}
+
+.project-card h2 {
+    font-size: 28px; /* Adjust font size for headings */
+    color: #25374f; /* Darker color for emphasis */
+    margin-bottom: 15px; /* Add spacing below the heading */
+    text-align: left; /* Align headings to the left */
+}
+
+.project-card h3 {
+    font-size: 22px; /* Slightly smaller than h2 */
+    color: #4e698e; /* Complementary color for subheadings */
+    margin-bottom: 10px; /* Add spacing below the subheading */
+    text-align: left; /* Align subheadings to the left */
+}
+
+.project-card p {
+    font-size: 18px; /* Standard font size for paragraphs */
+    color: #383e22; /* Neutral color for body text */
+    margin-bottom: 15px; /* Add spacing below paragraphs */
+    text-align: left; /* Align text to the left */
+}
+
+.project-card ul {
+    margin: 15px 0; /* Add spacing above and below lists */
+    padding-left: 20px; /* Indent list items */
+    list-style-type: disc; /* Use bullet points */
+    text-align: left; /* Ensure the list is left-aligned */
+}
+
+.project-card ul li {
+    font-size: 18px; /* Match paragraph font size */
+    color: #383e22; /* Neutral color for list items */
+    margin-bottom: 10px; /* Add spacing between list items */
+    text-align: left; /* Ensure each list item is left-aligned */
+}
+
+.project-card strong {
+    color: #25374f; /* Highlight important text */
+    font-weight: bold; /* Make it stand out */
+}
+
+.project-card img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Add rounded corners */
+  
+}
+
+.under-title-image {
+    display: block; /* Ensure the image is treated as a block element */
+
+    width: 40%; /* Set the width to 40% of the container */
+    max-width: 400px; /* Limit the maximum width for larger screens */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 16px; /* Add rounded corners for a polished look */
+   
+    background-color: #ffffff; /* Optional: Add a white background for contrast */
+    
+}
+
+.intro-heading {
+    margin-bottom: 0px; /* Reduce spacing below the heading */
+    padding-bottom: 0px;
+    font-size: 30px; /* Adjust font size if needed */
+    padding-left: 40px;;
+    text-align: left; 
+    color: #0D1821; /* Ensure consistent text color */
+}
+
+.intro-text {
+    margin-top: 0 px; /* Reduce spacing above the paragraph */
+    padding-top: 0px;
+    padding-left: 40px;;
+
+    font-size: 18px; /* Keep the font size consistent */
+    text-align: left; /* Keep the paragraph centered */
+    color: #0D1821; /* Ensure consistent text color */
+}
 
 
 

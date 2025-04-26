@@ -8,25 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        @media screen and (min-width: 1024px) {
-            .text-container, .project-card p, .project-card li, .project-card h2, .project-card h3 {
-                max-width: 75ch; /* Limit text width to 75 characters */
-                margin: 0 auto; /* Center the text block */
-                text-align: left; /* Ensure text is left-aligned */
-            }
-        }
-
-        /* Ensure text alignment for project cards */
-        .project-card {
-            text-align: left; /* Align text to the left */
-        }
-
-        .project-card p, .project-card h2, .project-card h3 {
-            margin: 0; /* Remove any extra margins */
-            padding-left: 20px;
-        }
-    </style>
+    
 </head>
 <body>
 <header>
@@ -55,10 +37,13 @@
     </label>
 </div>
 <h1>Pillzy</h1>
-<section class="project-card">
-    <img src="images/pillzylogin.gif" alt="Pillzy project preview" class="under-title-image">
-</section>
+<div class="text-block1">
     <section class="project-card">
+
+    <img src="images/pillzylogin.gif" alt="Pillzy project preview" class="under-title-image">
+    </section>
+    <section class="project-card">
+
         <h2>Project Overview</h2>
             <strong><p>Pillzy is your health journey—made easier.</p></strong>
 
@@ -73,8 +58,6 @@
                 <li><strong>Personalized Reminders:</strong> Never miss a dose with tailored notifications that fit your schedule.</li>
                 <li><strong>Gamified Experience:</strong> Stay motivated with fun, interactive features that turn health management into a rewarding journey.</li>
             </ul>
-        </div>
-        </ul>
     </section>
 <!-- Problem Statement -->
 <div class="project-card">
@@ -83,7 +66,6 @@
 </div>
 <div class="project-card">
     <h2>Developing a User Persona Made the Problem Clear</h2>
-
     <p>
         Managing medications can feel overwhelming—especially for young adults juggling busy lives. Missed doses, confusing schedules, and overly complicated apps often add to the frustration. With Pillzy, I set out to design a solution that simplifies the process, offering clarity, empathy, and a touch of joy to health management.
     </p>
@@ -92,6 +74,8 @@
         <li>Users want a simple, intuitive interface that makes it easy to manage their medications.</li>
         <li>Clear visuals (like color or icons) help avoid confusion.</li>
     </ul>
+    <h3>What I Learned:</h3>
+    <p>Testing revealed opportunities to <strong>improve navigation, enhance the forum experience, and make store details more accessible.</strong></p>
 </div>
 
 <!-- Wireframes -->
@@ -105,34 +89,6 @@
     </div>
 </section>
 
-<!-- User Testing -->
-<section class="project-card">
-    <h2>User Testing</h2>
-    <p>
-        Designing Pillzy was a journey of listening, learning, and refining. User testing revealed the importance of simplicity and clarity in creating a tool that truly supports its users. 
-        
-        <h3>What I Learned:</h3> <p>Users appreciated the clean interface but needed more visual cues to guide their experience. They wanted a design that felt intuitive, empowering, and free of unnecessary complexity.
-    </p>
-
-    <div class="user-testing-container">
-        <!-- Before Image -->
-        <div class="user-testing-item">
-            <img src="images/pillzytesting1.jpeg" alt="User Testing Before" class="user-testing-image">
-            <p class="image-caption"><h3>Before:</h3><p>A clean but overly minimal interface.</p>
-        </div>
-        <!-- After Image -->
-        <div class="user-testing-item">
-            <img src="images/pillzytesting2.jpeg" alt="User Testing After" class="user-testing-image">
-            <p class="image-caption"><h3>After:</h3><p> Clearer headings and a grey "Taken" button for better usability.</p>
-        </div>
-    </div>
-
-    <p>
-        These changes weren’t just about aesthetics. By adding a calendar at the top, users could see the current date at a glance. Headings were introduced to make it clear which medications were already logged, and the "Taken" button was redesigned with a neutral tone to signify no further action was needed. 
-        <br><br>
-        Every decision was rooted in the goal of making Pillzy a companion, not a chore.
-    </p>
-</section>
 
 <!-- Final Design -->
 <section class="project-card">
@@ -184,7 +140,8 @@
         </div>
     </div>
 </section>
-
+</div>
+</div>
 <footer class="site-footer">
     <a href="pillzy.html">Pillzy</a> |
     <a href="glammed.html">Glammed</a> |
