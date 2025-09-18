@@ -227,7 +227,7 @@ header h1 {
     z-index: 2;
 }
 
-header::before {
+header::before {/* dark overlay on header image */
     content: "";
     position: absolute;
     top: 0;
@@ -1008,6 +1008,71 @@ iframe {
   #menuToggle {
     display: block !important;
   }
+
+  h1 { /*page heading on small screen*/
+        font-size: 25px; 
+        padding-left: 20px; 
+        text-align: center; 
+    }
+
+  header h1 { /*logo size on small screen*/
+        font-size: 24px;
+        margin: 0;
+        align-items: center;
+    }
+  
+    /* "Hi I'm..." */
+    .intro-heading{
+        font-size: 22px; 
+        text-align: center;
+    }
+
+    /* Intro text */
+    .intro-text {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .text-block1 h2 { /*card heading on small screen*/
+        color: #0D1821;
+        font-size: 20px;
+        padding-left: 19px;
+        text-align: center;
+    }
+
+    .text-block1 h3 { /*card subheadings on small screen*/ 
+        color: #0D1821;
+        font-size: 20px;
+        padding-left: 19px;
+    }
+
+    .text-block1 p {
+        color: #0D1821;
+        font-size: 16px;
+    }
+
+    /* key feature bullet point test */
+    .project-card h3 + ul li {
+    font-size: 16px;
+    margin-bottom: 6px;
+    }
+
+    .project-card-homepage {
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .project-card-homepage .project-image-tile {
+        text-align: left;
+    }
+
+    /*explore more projects section*/
+    .explore-project-content h3 {
+        font-size: 16px;
+    }
+
+    .explore-project-content p {
+        font-size: 16px;
+    }
+
 }
-
-
